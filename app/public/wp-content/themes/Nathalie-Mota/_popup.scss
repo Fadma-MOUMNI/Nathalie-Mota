@@ -59,9 +59,11 @@
 
                 label {
                     font-size: 14px;
+                    font-family: 'Poppins', sans-serif;
+                    font-weight: 400;
                 }
 
-                .btn-envoyer {
+                .btn-envoyer__container {
 
                     display: flex;
                     justify-content: center;
@@ -72,7 +74,9 @@
 
 
 
-
+        .wpcf7-spinner {
+            display: none;
+        }
 
     }
 
