@@ -1,0 +1,49 @@
+/********************************** HEADER***************/
+
+header {
+    width: 100%;
+    //background-color: black;
+    font-size: 16px;
+    top: 0;
+
+    position: sticky;
+    display: flex;
+    /* align-items: center;*/
+    justify-content: center;
+}
+
+.container_header {
+
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+.container_header img {
+    width: 220px;
+    height: auto;
+    margin: 40px;
+}
+
+.menu-main-container,
+.menu {
+    width: 100%;
+}
+
+nav {
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+
+.menu-main-container #menu-main {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+.menu-main-container li {
+    text-decoration: none;
+}

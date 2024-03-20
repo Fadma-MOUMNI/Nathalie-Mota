@@ -1,0 +1,133 @@
+/***************************************POPUP**************/
+.hidden {
+    display: none;
+}
+
+.popup_cover {
+
+    background-color: #1f1f2b;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 77;
+
+    .popup-contact {
+        max-width: 500px;
+        height: 90vh;
+        border: 5px solid #000000;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        /////////////////////////////////////////le titre de popup///////
+        .popup-title__container {
+            width: 100%;
+
+
+
+            .popup-title {
+                background-color: #1f1f2b;
+                height: 7vh;
+                background-image: url('/assets/img/Contact.png');
+                background-repeat: repeat-x;
+                z-index: 90;
+
+            }
+
+            .popup-title--first {
+                margin-bottom: -10px;
+            }
+
+
+
+        }
+
+        /////////////////////////////////////////////////////////form popup
+        .popup-info {
+            //background-color: #0ea739;
+            width: 50%;
+
+
+
+
+
+
+            .formulaire {
+                input {
+                    height: 40px;
+                    border-radius: 8px;
+
+                }
+
+                label {
+                    font-size: 12px;
+                    font-family: 'Poppins', sans-serif;
+                    font-weight: 500;
+                    color: #313144;
+                    ;
+                }
+
+                .btn-envoyer__container {
+                    background-color: rgb(255, 255, 255);
+
+                    display: flex;
+                    justify-content: center;
+
+                    p {
+                        width: 100%;
+                    }
+
+                    .btn-envoyer {
+                        font-family: 'space Mono', sans-serif;
+                        font-size: 12px;
+                        font-weight: 400;
+                        background-color: #D8D8D8;
+                        border: none;
+                        border-radius: 2px;
+                        width: 100%;
+                        height: 6vh;
+
+
+                    }
+                }
+
+            }
+        }
+
+
+
+        .wpcf7-spinner {
+            display: none;
+        }
+
+    }
+
+
+
+
+
+
+
+}
+
+.wpcf7-form p .wpcf7-text,
+.wpcf7-form p .wpcf7-email,
+.wpcf7-form p textarea {
+    //background-color: aqua;
+
+    width: 100%;
+    // border-radius: 8px;
+    border: 1px solid #47474b;
+}
+
+/////////////////////////////////////////////////////////
+/// 
+/// 

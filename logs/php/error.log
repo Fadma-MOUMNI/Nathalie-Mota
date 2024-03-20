@@ -198,3 +198,284 @@
 [15-Mar-2024 19:28:05 UTC] PHP  10. wpdb->__construct() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/load.php:683
 [15-Mar-2024 19:28:05 UTC] PHP  11. wpdb->db_connect() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php:767
 [15-Mar-2024 19:28:05 UTC] PHP  12. mysqli_real_connect() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php:1987
+[16-Mar-2024 12:21:54 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php on line 1987
+[16-Mar-2024 12:21:54 UTC] PHP Stack trace:
+[16-Mar-2024 12:21:54 UTC] PHP   1. {main}() /Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar:0
+[16-Mar-2024 12:21:54 UTC] PHP   2. include() /Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar:4
+[16-Mar-2024 12:21:54 UTC] PHP   3. include() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/php/boot-phar.php:11
+[16-Mar-2024 12:21:54 UTC] PHP   4. WP_CLI\bootstrap() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/wp-cli.php:27
+[16-Mar-2024 12:21:54 UTC] PHP   5. WP_CLI\Bootstrap\LaunchRunner->process() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/bootstrap.php:78
+[16-Mar-2024 12:21:54 UTC] PHP   6. WP_CLI\Runner->start() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Bootstrap/LaunchRunner.php:28
+[16-Mar-2024 12:21:54 UTC] PHP   7. WP_CLI\Runner->load_wordpress() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php:1235
+[16-Mar-2024 12:21:54 UTC] PHP   8. require() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php:1317
+[16-Mar-2024 12:21:54 UTC] PHP   9. require_wp_db() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-settings.php:124
+[16-Mar-2024 12:21:54 UTC] PHP  10. wpdb->__construct() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/load.php:683
+[16-Mar-2024 12:21:54 UTC] PHP  11. wpdb->db_connect() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php:767
+[16-Mar-2024 12:21:54 UTC] PHP  12. mysqli_real_connect() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php:1987
+[16-Mar-2024 12:22:55 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php on line 1987
+[16-Mar-2024 12:22:55 UTC] PHP Stack trace:
+[16-Mar-2024 12:22:55 UTC] PHP   1. {main}() /Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar:0
+[16-Mar-2024 12:22:55 UTC] PHP   2. include() /Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar:4
+[16-Mar-2024 12:22:55 UTC] PHP   3. include() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/php/boot-phar.php:11
+[16-Mar-2024 12:22:55 UTC] PHP   4. WP_CLI\bootstrap() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/wp-cli.php:27
+[16-Mar-2024 12:22:55 UTC] PHP   5. WP_CLI\Bootstrap\LaunchRunner->process() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/bootstrap.php:78
+[16-Mar-2024 12:22:55 UTC] PHP   6. WP_CLI\Runner->start() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Bootstrap/LaunchRunner.php:28
+[16-Mar-2024 12:22:55 UTC] PHP   7. WP_CLI\Runner->load_wordpress() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php:1235
+[16-Mar-2024 12:22:55 UTC] PHP   8. require() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php:1317
+[16-Mar-2024 12:22:55 UTC] PHP   9. require_wp_db() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-settings.php:124
+[16-Mar-2024 12:22:55 UTC] PHP  10. wpdb->__construct() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/load.php:683
+[16-Mar-2024 12:22:55 UTC] PHP  11. wpdb->db_connect() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php:767
+[16-Mar-2024 12:22:55 UTC] PHP  12. mysqli_real_connect() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php:1987
+[16-Mar-2024 19:27:10 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php on line 1987
+[16-Mar-2024 19:27:10 UTC] PHP Stack trace:
+[16-Mar-2024 19:27:10 UTC] PHP   1. {main}() /Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar:0
+[16-Mar-2024 19:27:10 UTC] PHP   2. include() /Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar:4
+[16-Mar-2024 19:27:10 UTC] PHP   3. include() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/php/boot-phar.php:11
+[16-Mar-2024 19:27:10 UTC] PHP   4. WP_CLI\bootstrap() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/wp-cli.php:27
+[16-Mar-2024 19:27:10 UTC] PHP   5. WP_CLI\Bootstrap\LaunchRunner->process() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/bootstrap.php:78
+[16-Mar-2024 19:27:10 UTC] PHP   6. WP_CLI\Runner->start() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Bootstrap/LaunchRunner.php:28
+[16-Mar-2024 19:27:10 UTC] PHP   7. WP_CLI\Runner->load_wordpress() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php:1235
+[16-Mar-2024 19:27:10 UTC] PHP   8. require() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php:1317
+[16-Mar-2024 19:27:10 UTC] PHP   9. require_wp_db() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-settings.php:124
+[16-Mar-2024 19:27:10 UTC] PHP  10. wpdb->__construct() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/load.php:683
+[16-Mar-2024 19:27:10 UTC] PHP  11. wpdb->db_connect() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php:767
+[16-Mar-2024 19:27:10 UTC] PHP  12. mysqli_real_connect() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php:1987
+[16-Mar-2024 19:27:10 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php on line 1987
+[16-Mar-2024 19:27:10 UTC] PHP Stack trace:
+[16-Mar-2024 19:27:10 UTC] PHP   1. {main}() /Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar:0
+[16-Mar-2024 19:27:10 UTC] PHP   2. include() /Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar:4
+[16-Mar-2024 19:27:10 UTC] PHP   3. include() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/php/boot-phar.php:11
+[16-Mar-2024 19:27:10 UTC] PHP   4. WP_CLI\bootstrap() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/wp-cli.php:27
+[16-Mar-2024 19:27:10 UTC] PHP   5. WP_CLI\Bootstrap\LaunchRunner->process() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/bootstrap.php:78
+[16-Mar-2024 19:27:10 UTC] PHP   6. WP_CLI\Runner->start() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Bootstrap/LaunchRunner.php:28
+[16-Mar-2024 19:27:10 UTC] PHP   7. WP_CLI\Runner->load_wordpress() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php:1235
+[16-Mar-2024 19:27:10 UTC] PHP   8. require() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php:1317
+[16-Mar-2024 19:27:10 UTC] PHP   9. require_wp_db() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-settings.php:124
+[16-Mar-2024 19:27:10 UTC] PHP  10. wpdb->__construct() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/load.php:683
+[16-Mar-2024 19:27:10 UTC] PHP  11. wpdb->db_connect() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php:767
+[16-Mar-2024 19:27:10 UTC] PHP  12. mysqli_real_connect() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php:1987
+[16-Mar-2024 20:01:13 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php on line 1987
+[16-Mar-2024 20:01:13 UTC] PHP Stack trace:
+[16-Mar-2024 20:01:13 UTC] PHP   1. {main}() /Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar:0
+[16-Mar-2024 20:01:13 UTC] PHP   2. include() /Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar:4
+[16-Mar-2024 20:01:13 UTC] PHP   3. include() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/php/boot-phar.php:11
+[16-Mar-2024 20:01:13 UTC] PHP   4. WP_CLI\bootstrap() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/wp-cli.php:27
+[16-Mar-2024 20:01:13 UTC] PHP   5. WP_CLI\Bootstrap\LaunchRunner->process() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/bootstrap.php:78
+[16-Mar-2024 20:01:13 UTC] PHP   6. WP_CLI\Runner->start() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Bootstrap/LaunchRunner.php:28
+[16-Mar-2024 20:01:13 UTC] PHP   7. WP_CLI\Runner->load_wordpress() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php:1235
+[16-Mar-2024 20:01:13 UTC] PHP   8. require() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php:1317
+[16-Mar-2024 20:01:13 UTC] PHP   9. require_wp_db() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-settings.php:124
+[16-Mar-2024 20:01:13 UTC] PHP  10. wpdb->__construct() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/load.php:683
+[16-Mar-2024 20:01:13 UTC] PHP  11. wpdb->db_connect() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php:767
+[16-Mar-2024 20:01:13 UTC] PHP  12. mysqli_real_connect() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php:1987
+[16-Mar-2024 20:01:13 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php on line 1987
+[16-Mar-2024 20:01:13 UTC] PHP Stack trace:
+[16-Mar-2024 20:01:13 UTC] PHP   1. {main}() /Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar:0
+[16-Mar-2024 20:01:13 UTC] PHP   2. include() /Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar:4
+[16-Mar-2024 20:01:13 UTC] PHP   3. include() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/php/boot-phar.php:11
+[16-Mar-2024 20:01:13 UTC] PHP   4. WP_CLI\bootstrap() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/wp-cli.php:27
+[16-Mar-2024 20:01:13 UTC] PHP   5. WP_CLI\Bootstrap\LaunchRunner->process() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/bootstrap.php:78
+[16-Mar-2024 20:01:13 UTC] PHP   6. WP_CLI\Runner->start() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Bootstrap/LaunchRunner.php:28
+[16-Mar-2024 20:01:13 UTC] PHP   7. WP_CLI\Runner->load_wordpress() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php:1235
+[16-Mar-2024 20:01:13 UTC] PHP   8. require() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php:1317
+[16-Mar-2024 20:01:13 UTC] PHP   9. require_wp_db() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-settings.php:124
+[16-Mar-2024 20:01:13 UTC] PHP  10. wpdb->__construct() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/load.php:683
+[16-Mar-2024 20:01:13 UTC] PHP  11. wpdb->db_connect() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php:767
+[16-Mar-2024 20:01:13 UTC] PHP  12. mysqli_real_connect() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php:1987
+[17-Mar-2024 01:01:54 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php on line 1987
+[17-Mar-2024 01:01:54 UTC] PHP Stack trace:
+[17-Mar-2024 01:01:54 UTC] PHP   1. {main}() /Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar:0
+[17-Mar-2024 01:01:54 UTC] PHP   2. include() /Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar:4
+[17-Mar-2024 01:01:54 UTC] PHP   3. include() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/php/boot-phar.php:11
+[17-Mar-2024 01:01:54 UTC] PHP   4. WP_CLI\bootstrap() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/wp-cli.php:27
+[17-Mar-2024 01:01:54 UTC] PHP   5. WP_CLI\Bootstrap\LaunchRunner->process() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/bootstrap.php:78
+[17-Mar-2024 01:01:54 UTC] PHP   6. WP_CLI\Runner->start() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Bootstrap/LaunchRunner.php:28
+[17-Mar-2024 01:01:54 UTC] PHP   7. WP_CLI\Runner->load_wordpress() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php:1235
+[17-Mar-2024 01:01:54 UTC] PHP   8. require() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php:1317
+[17-Mar-2024 01:01:54 UTC] PHP   9. require_wp_db() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-settings.php:124
+[17-Mar-2024 01:01:54 UTC] PHP  10. wpdb->__construct() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/load.php:683
+[17-Mar-2024 01:01:54 UTC] PHP  11. wpdb->db_connect() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php:767
+[17-Mar-2024 01:01:54 UTC] PHP  12. mysqli_real_connect() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php:1987
+[17-Mar-2024 01:01:55 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php on line 1987
+[17-Mar-2024 01:01:55 UTC] PHP Stack trace:
+[17-Mar-2024 01:01:55 UTC] PHP   1. {main}() /Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar:0
+[17-Mar-2024 01:01:55 UTC] PHP   2. include() /Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar:4
+[17-Mar-2024 01:01:55 UTC] PHP   3. include() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/php/boot-phar.php:11
+[17-Mar-2024 01:01:55 UTC] PHP   4. WP_CLI\bootstrap() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/wp-cli.php:27
+[17-Mar-2024 01:01:55 UTC] PHP   5. WP_CLI\Bootstrap\LaunchRunner->process() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/bootstrap.php:78
+[17-Mar-2024 01:01:55 UTC] PHP   6. WP_CLI\Runner->start() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Bootstrap/LaunchRunner.php:28
+[17-Mar-2024 01:01:55 UTC] PHP   7. WP_CLI\Runner->load_wordpress() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php:1235
+[17-Mar-2024 01:01:55 UTC] PHP   8. require() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php:1317
+[17-Mar-2024 01:01:55 UTC] PHP   9. require_wp_db() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-settings.php:124
+[17-Mar-2024 01:01:55 UTC] PHP  10. wpdb->__construct() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/load.php:683
+[17-Mar-2024 01:01:55 UTC] PHP  11. wpdb->db_connect() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php:767
+[17-Mar-2024 01:01:55 UTC] PHP  12. mysqli_real_connect() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php:1987
+[18-Mar-2024 07:59:07 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php on line 1987
+[18-Mar-2024 07:59:07 UTC] PHP Stack trace:
+[18-Mar-2024 07:59:07 UTC] PHP   1. {main}() /Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar:0
+[18-Mar-2024 07:59:07 UTC] PHP   2. include() /Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar:4
+[18-Mar-2024 07:59:07 UTC] PHP   3. include() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/php/boot-phar.php:11
+[18-Mar-2024 07:59:07 UTC] PHP   4. WP_CLI\bootstrap() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/wp-cli.php:27
+[18-Mar-2024 07:59:07 UTC] PHP   5. WP_CLI\Bootstrap\LaunchRunner->process() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/bootstrap.php:78
+[18-Mar-2024 07:59:07 UTC] PHP   6. WP_CLI\Runner->start() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Bootstrap/LaunchRunner.php:28
+[18-Mar-2024 07:59:07 UTC] PHP   7. WP_CLI\Runner->load_wordpress() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php:1235
+[18-Mar-2024 07:59:07 UTC] PHP   8. require() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php:1317
+[18-Mar-2024 07:59:07 UTC] PHP   9. require_wp_db() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-settings.php:124
+[18-Mar-2024 07:59:07 UTC] PHP  10. wpdb->__construct() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/load.php:683
+[18-Mar-2024 07:59:07 UTC] PHP  11. wpdb->db_connect() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php:767
+[18-Mar-2024 07:59:07 UTC] PHP  12. mysqli_real_connect() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php:1987
+[18-Mar-2024 08:01:55 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php on line 1987
+[18-Mar-2024 08:01:55 UTC] PHP Stack trace:
+[18-Mar-2024 08:01:55 UTC] PHP   1. {main}() /Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar:0
+[18-Mar-2024 08:01:55 UTC] PHP   2. include() /Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar:4
+[18-Mar-2024 08:01:55 UTC] PHP   3. include() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/php/boot-phar.php:11
+[18-Mar-2024 08:01:55 UTC] PHP   4. WP_CLI\bootstrap() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/wp-cli.php:27
+[18-Mar-2024 08:01:55 UTC] PHP   5. WP_CLI\Bootstrap\LaunchRunner->process() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/bootstrap.php:78
+[18-Mar-2024 08:01:55 UTC] PHP   6. WP_CLI\Runner->start() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Bootstrap/LaunchRunner.php:28
+[18-Mar-2024 08:01:55 UTC] PHP   7. WP_CLI\Runner->load_wordpress() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php:1235
+[18-Mar-2024 08:01:55 UTC] PHP   8. require() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php:1317
+[18-Mar-2024 08:01:55 UTC] PHP   9. require_wp_db() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-settings.php:124
+[18-Mar-2024 08:01:55 UTC] PHP  10. wpdb->__construct() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/load.php:683
+[18-Mar-2024 08:01:55 UTC] PHP  11. wpdb->db_connect() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php:767
+[18-Mar-2024 08:01:55 UTC] PHP  12. mysqli_real_connect() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php:1987
+[18-Mar-2024 08:26:15 UTC] PHP Notice:  Trying to get property 'title' of non-object in /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wp-customize-widgets.php on line 905
+[18-Mar-2024 08:26:15 UTC] PHP Stack trace:
+[18-Mar-2024 08:26:15 UTC] PHP   1. {main}() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-admin/customize.php:0
+[18-Mar-2024 08:26:15 UTC] PHP   2. do_action() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-admin/customize.php:302
+[18-Mar-2024 08:26:15 UTC] PHP   3. WP_Hook->do_action() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/plugin.php:517
+[18-Mar-2024 08:26:15 UTC] PHP   4. WP_Hook->apply_filters() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wp-hook.php:348
+[18-Mar-2024 08:26:15 UTC] PHP   5. WP_Customize_Widgets->output_widget_control_templates() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wp-hook.php:324
+[18-Mar-2024 08:26:16 UTC] PHP Notice:  Trying to get property 'title' of non-object in /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wp-customize-widgets.php on line 905
+[18-Mar-2024 08:26:16 UTC] PHP Stack trace:
+[18-Mar-2024 08:26:16 UTC] PHP   1. {main}() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-admin/customize.php:0
+[18-Mar-2024 08:26:16 UTC] PHP   2. do_action() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-admin/customize.php:302
+[18-Mar-2024 08:26:16 UTC] PHP   3. WP_Hook->do_action() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/plugin.php:517
+[18-Mar-2024 08:26:16 UTC] PHP   4. WP_Hook->apply_filters() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wp-hook.php:348
+[18-Mar-2024 08:26:16 UTC] PHP   5. WP_Customize_Widgets->output_widget_control_templates() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wp-hook.php:324
+[19-Mar-2024 08:24:54 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php on line 1987
+[19-Mar-2024 08:24:54 UTC] PHP Stack trace:
+[19-Mar-2024 08:24:54 UTC] PHP   1. {main}() /Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar:0
+[19-Mar-2024 08:24:54 UTC] PHP   2. include() /Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar:4
+[19-Mar-2024 08:24:54 UTC] PHP   3. include() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/php/boot-phar.php:11
+[19-Mar-2024 08:24:54 UTC] PHP   4. WP_CLI\bootstrap() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/wp-cli.php:27
+[19-Mar-2024 08:24:54 UTC] PHP   5. WP_CLI\Bootstrap\LaunchRunner->process() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/bootstrap.php:78
+[19-Mar-2024 08:24:54 UTC] PHP   6. WP_CLI\Runner->start() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Bootstrap/LaunchRunner.php:28
+[19-Mar-2024 08:24:54 UTC] PHP   7. WP_CLI\Runner->load_wordpress() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php:1235
+[19-Mar-2024 08:24:54 UTC] PHP   8. require() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php:1317
+[19-Mar-2024 08:24:54 UTC] PHP   9. require_wp_db() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-settings.php:124
+[19-Mar-2024 08:24:54 UTC] PHP  10. wpdb->__construct() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/load.php:683
+[19-Mar-2024 08:24:54 UTC] PHP  11. wpdb->db_connect() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php:767
+[19-Mar-2024 08:24:54 UTC] PHP  12. mysqli_real_connect() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php:1987
+[19-Mar-2024 08:24:56 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php on line 1987
+[19-Mar-2024 08:24:56 UTC] PHP Stack trace:
+[19-Mar-2024 08:24:56 UTC] PHP   1. {main}() /Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar:0
+[19-Mar-2024 08:24:56 UTC] PHP   2. include() /Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar:4
+[19-Mar-2024 08:24:56 UTC] PHP   3. include() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/php/boot-phar.php:11
+[19-Mar-2024 08:24:56 UTC] PHP   4. WP_CLI\bootstrap() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/wp-cli.php:27
+[19-Mar-2024 08:24:56 UTC] PHP   5. WP_CLI\Bootstrap\LaunchRunner->process() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/bootstrap.php:78
+[19-Mar-2024 08:24:56 UTC] PHP   6. WP_CLI\Runner->start() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Bootstrap/LaunchRunner.php:28
+[19-Mar-2024 08:24:56 UTC] PHP   7. WP_CLI\Runner->load_wordpress() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php:1235
+[19-Mar-2024 08:24:56 UTC] PHP   8. require() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php:1317
+[19-Mar-2024 08:24:56 UTC] PHP   9. require_wp_db() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-settings.php:124
+[19-Mar-2024 08:24:56 UTC] PHP  10. wpdb->__construct() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/load.php:683
+[19-Mar-2024 08:24:56 UTC] PHP  11. wpdb->db_connect() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php:767
+[19-Mar-2024 08:24:56 UTC] PHP  12. mysqli_real_connect() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php:1987
+[19-Mar-2024 09:25:19 UTC] PHP Parse error:  syntax error, unexpected '/', expecting end of file in /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-content/themes/Nathalie-Mota/functions.php on line 56
+[19-Mar-2024 09:25:19 UTC] PHP Notice:  Trying to access array offset on value of type bool in /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wp-recovery-mode-email-service.php on line 367
+[19-Mar-2024 09:25:19 UTC] PHP Stack trace:
+[19-Mar-2024 09:25:19 UTC] PHP   1. WP_Fatal_Error_Handler->handle() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wp-fatal-error-handler.php:0
+[19-Mar-2024 09:25:19 UTC] PHP   2. WP_Recovery_Mode->handle_error() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wp-fatal-error-handler.php:53
+[19-Mar-2024 09:25:19 UTC] PHP   3. WP_Recovery_Mode_Email_Service->maybe_send_recovery_mode_email() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wp-recovery-mode.php:185
+[19-Mar-2024 09:25:19 UTC] PHP   4. WP_Recovery_Mode_Email_Service->send_recovery_mode_email() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wp-recovery-mode-email-service.php:62
+[19-Mar-2024 09:25:19 UTC] PHP   5. WP_Recovery_Mode_Email_Service->get_debug() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wp-recovery-mode-email-service.php:150
+[19-Mar-2024 09:25:19 UTC] PHP Notice:  Trying to access array offset on value of type bool in /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wp-recovery-mode-email-service.php on line 368
+[19-Mar-2024 09:25:19 UTC] PHP Stack trace:
+[19-Mar-2024 09:25:19 UTC] PHP   1. WP_Fatal_Error_Handler->handle() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wp-fatal-error-handler.php:0
+[19-Mar-2024 09:25:19 UTC] PHP   2. WP_Recovery_Mode->handle_error() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wp-fatal-error-handler.php:53
+[19-Mar-2024 09:25:19 UTC] PHP   3. WP_Recovery_Mode_Email_Service->maybe_send_recovery_mode_email() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wp-recovery-mode.php:185
+[19-Mar-2024 09:25:19 UTC] PHP   4. WP_Recovery_Mode_Email_Service->send_recovery_mode_email() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wp-recovery-mode-email-service.php:62
+[19-Mar-2024 09:25:19 UTC] PHP   5. WP_Recovery_Mode_Email_Service->get_debug() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wp-recovery-mode-email-service.php:150
+[19-Mar-2024 09:25:19 UTC] PHP Parse error:  syntax error, unexpected '/', expecting end of file in /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-content/themes/Nathalie-Mota/functions.php on line 56
+[19-Mar-2024 09:25:19 UTC] PHP Parse error:  syntax error, unexpected '/', expecting end of file in /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-content/themes/Nathalie-Mota/functions.php on line 56
+[19-Mar-2024 09:25:19 UTC] PHP Parse error:  syntax error, unexpected '/', expecting end of file in /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-content/themes/Nathalie-Mota/functions.php on line 56
+[19-Mar-2024 10:44:56 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php on line 1987
+[19-Mar-2024 10:44:56 UTC] PHP Stack trace:
+[19-Mar-2024 10:44:56 UTC] PHP   1. {main}() /Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar:0
+[19-Mar-2024 10:44:56 UTC] PHP   2. include() /Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar:4
+[19-Mar-2024 10:44:56 UTC] PHP   3. include() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/php/boot-phar.php:11
+[19-Mar-2024 10:44:56 UTC] PHP   4. WP_CLI\bootstrap() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/wp-cli.php:27
+[19-Mar-2024 10:44:56 UTC] PHP   5. WP_CLI\Bootstrap\LaunchRunner->process() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/bootstrap.php:78
+[19-Mar-2024 10:44:56 UTC] PHP   6. WP_CLI\Runner->start() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Bootstrap/LaunchRunner.php:28
+[19-Mar-2024 10:44:56 UTC] PHP   7. WP_CLI\Runner->load_wordpress() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php:1235
+[19-Mar-2024 10:44:56 UTC] PHP   8. require() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php:1317
+[19-Mar-2024 10:44:56 UTC] PHP   9. require_wp_db() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-settings.php:124
+[19-Mar-2024 10:44:56 UTC] PHP  10. wpdb->__construct() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/load.php:683
+[19-Mar-2024 10:44:56 UTC] PHP  11. wpdb->db_connect() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php:767
+[19-Mar-2024 10:44:56 UTC] PHP  12. mysqli_real_connect() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php:1987
+[19-Mar-2024 10:44:59 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php on line 1987
+[19-Mar-2024 10:44:59 UTC] PHP Stack trace:
+[19-Mar-2024 10:44:59 UTC] PHP   1. {main}() /Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar:0
+[19-Mar-2024 10:44:59 UTC] PHP   2. include() /Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar:4
+[19-Mar-2024 10:44:59 UTC] PHP   3. include() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/php/boot-phar.php:11
+[19-Mar-2024 10:44:59 UTC] PHP   4. WP_CLI\bootstrap() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/wp-cli.php:27
+[19-Mar-2024 10:44:59 UTC] PHP   5. WP_CLI\Bootstrap\LaunchRunner->process() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/bootstrap.php:78
+[19-Mar-2024 10:44:59 UTC] PHP   6. WP_CLI\Runner->start() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Bootstrap/LaunchRunner.php:28
+[19-Mar-2024 10:44:59 UTC] PHP   7. WP_CLI\Runner->load_wordpress() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php:1235
+[19-Mar-2024 10:44:59 UTC] PHP   8. require() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php:1317
+[19-Mar-2024 10:44:59 UTC] PHP   9. require_wp_db() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-settings.php:124
+[19-Mar-2024 10:44:59 UTC] PHP  10. wpdb->__construct() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/load.php:683
+[19-Mar-2024 10:44:59 UTC] PHP  11. wpdb->db_connect() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php:767
+[19-Mar-2024 10:44:59 UTC] PHP  12. mysqli_real_connect() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php:1987
+[19-Mar-2024 13:20:27 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php on line 1987
+[19-Mar-2024 13:20:27 UTC] PHP Stack trace:
+[19-Mar-2024 13:20:27 UTC] PHP   1. {main}() /Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar:0
+[19-Mar-2024 13:20:27 UTC] PHP   2. include() /Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar:4
+[19-Mar-2024 13:20:27 UTC] PHP   3. include() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/php/boot-phar.php:11
+[19-Mar-2024 13:20:27 UTC] PHP   4. WP_CLI\bootstrap() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/wp-cli.php:27
+[19-Mar-2024 13:20:27 UTC] PHP   5. WP_CLI\Bootstrap\LaunchRunner->process() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/bootstrap.php:78
+[19-Mar-2024 13:20:27 UTC] PHP   6. WP_CLI\Runner->start() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Bootstrap/LaunchRunner.php:28
+[19-Mar-2024 13:20:27 UTC] PHP   7. WP_CLI\Runner->load_wordpress() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php:1235
+[19-Mar-2024 13:20:27 UTC] PHP   8. require() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php:1317
+[19-Mar-2024 13:20:27 UTC] PHP   9. require_wp_db() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-settings.php:124
+[19-Mar-2024 13:20:27 UTC] PHP  10. wpdb->__construct() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/load.php:683
+[19-Mar-2024 13:20:27 UTC] PHP  11. wpdb->db_connect() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php:767
+[19-Mar-2024 13:20:27 UTC] PHP  12. mysqli_real_connect() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php:1987
+[19-Mar-2024 13:20:29 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php on line 1987
+[19-Mar-2024 13:20:29 UTC] PHP Stack trace:
+[19-Mar-2024 13:20:29 UTC] PHP   1. {main}() /Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar:0
+[19-Mar-2024 13:20:29 UTC] PHP   2. include() /Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar:4
+[19-Mar-2024 13:20:29 UTC] PHP   3. include() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/php/boot-phar.php:11
+[19-Mar-2024 13:20:29 UTC] PHP   4. WP_CLI\bootstrap() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/wp-cli.php:27
+[19-Mar-2024 13:20:29 UTC] PHP   5. WP_CLI\Bootstrap\LaunchRunner->process() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/bootstrap.php:78
+[19-Mar-2024 13:20:29 UTC] PHP   6. WP_CLI\Runner->start() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Bootstrap/LaunchRunner.php:28
+[19-Mar-2024 13:20:29 UTC] PHP   7. WP_CLI\Runner->load_wordpress() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php:1235
+[19-Mar-2024 13:20:29 UTC] PHP   8. require() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php:1317
+[19-Mar-2024 13:20:29 UTC] PHP   9. require_wp_db() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-settings.php:124
+[19-Mar-2024 13:20:29 UTC] PHP  10. wpdb->__construct() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/load.php:683
+[19-Mar-2024 13:20:29 UTC] PHP  11. wpdb->db_connect() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php:767
+[19-Mar-2024 13:20:29 UTC] PHP  12. mysqli_real_connect() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wpdb.php:1987
+[19-Mar-2024 23:49:23 UTC] PHP Notice:  Trying to get property 'title' of non-object in /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wp-customize-widgets.php on line 905
+[19-Mar-2024 23:49:23 UTC] PHP Stack trace:
+[19-Mar-2024 23:49:23 UTC] PHP   1. {main}() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-admin/customize.php:0
+[19-Mar-2024 23:49:23 UTC] PHP   2. do_action() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-admin/customize.php:302
+[19-Mar-2024 23:49:23 UTC] PHP   3. WP_Hook->do_action() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/plugin.php:517
+[19-Mar-2024 23:49:23 UTC] PHP   4. WP_Hook->apply_filters() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wp-hook.php:348
+[19-Mar-2024 23:49:23 UTC] PHP   5. WP_Customize_Widgets->output_widget_control_templates() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wp-hook.php:324
+[19-Mar-2024 23:49:26 UTC] PHP Notice:  Trying to get property 'title' of non-object in /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wp-customize-widgets.php on line 905
+[19-Mar-2024 23:49:26 UTC] PHP Stack trace:
+[19-Mar-2024 23:49:26 UTC] PHP   1. {main}() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-admin/customize.php:0
+[19-Mar-2024 23:49:26 UTC] PHP   2. do_action() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-admin/customize.php:302
+[19-Mar-2024 23:49:26 UTC] PHP   3. WP_Hook->do_action() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/plugin.php:517
+[19-Mar-2024 23:49:26 UTC] PHP   4. WP_Hook->apply_filters() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wp-hook.php:348
+[19-Mar-2024 23:49:26 UTC] PHP   5. WP_Customize_Widgets->output_widget_control_templates() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/class-wp-hook.php:324
+[20-Mar-2024 00:31:27 UTC] PHP Deprecated:  File Theme without comments.php is deprecated since version 3.0.0 with no alternative available. Please include a comments.php template in your theme. in /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/functions.php on line 6031
+[20-Mar-2024 00:31:27 UTC] PHP Stack trace:
+[20-Mar-2024 00:31:27 UTC] PHP   1. {main}() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/index.php:0
+[20-Mar-2024 00:31:27 UTC] PHP   2. require() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/index.php:17
+[20-Mar-2024 00:31:27 UTC] PHP   3. require_once() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-blog-header.php:19
+[20-Mar-2024 00:31:27 UTC] PHP   4. include() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/template-loader.php:106
+[20-Mar-2024 00:31:27 UTC] PHP   5. comments_template() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-content/themes/Nathalie-Mota/single.php:30
+[20-Mar-2024 00:31:27 UTC] PHP   6. require() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/comment-template.php:1622
+[20-Mar-2024 00:31:27 UTC] PHP   7. _deprecated_file() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/theme-compat/comments.php:15
+[20-Mar-2024 00:31:27 UTC] PHP   8. wp_trigger_error() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/functions.php:5745
+[20-Mar-2024 00:31:27 UTC] PHP   9. trigger_error() /Users/fadmamoumni/Local Sites/nathaliemota/app/public/wp-includes/functions.php:6031
