@@ -1,41 +1,154 @@
 <!--Ce fichier est utilisé pour afficher le contenu d'un article individuel d'un blog.-->
+<?php get_header(); ?>
 
-<<?php
-    // Boucle WordPress pour récupérer les articles de blog
-    if (have_posts()) :
-        while (have_posts()) :
-            the_post();
-    ?> <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <header class="entry-header">
-        <h1 class="entry-title"><?php the_title(); ?></h1>
-        <div class="entry-meta">
-            <?php
-            printf(
-                __('Publié le %s par %s', 'votretheme'),
-                get_the_date(),
-                get_the_author()
-            );
-            ?>
-        </div><!-- .entry-meta -->
-    </header><!-- .entry-header -->
+<div class="main single">
+    <?php if (have_posts()) : ?>
+        <?php while (have_posts()) : the_post(); ?>
+            <article class="post">
+                <div class="photo__info-description">
+                    <h1><?php the_title(); ?></h1>
+                    <ul class="post-info">
+                        <li>RÉFÉRENCE : <?php the_field('reference'); ?></li>
+                        <li>CATÉGORIE : <?php the_field('categorie'); ?></li>
+                        <li>FORMAT : <?php the_field('format'); ?></li>
+                        <li>TYPE : <?php the_field('type'); ?></li>
+                        <?php
+                        $annee_value = get_field('annee');
+                        // Convertir le format de la date
+                        $annee_value_formatted = date('Y-m-d', strtotime(str_replace('/', '-', $annee_value)));
+                        // Récupérer seulement l'année
+                        $annee = date('Y', strtotime($annee_value_formatted));
+                        ?>
+                        <li>ANNÉE : <?php echo $annee; ?></li>
 
-    <div class="entry-content">
-        <?php the_content(); ?>
-    </div><!-- .entry-content -->
 
-    <footer class="entry-footer">
-        <?php
-            // Si le thème supporte les commentaires, afficher le lien vers les commentaires
-            if (comments_open() || get_comments_number()) :
-                comments_template();
-            endif;
-        ?>
-    </footer><!-- .entry-footer -->
-    </article><!-- #post-<?php the_ID(); ?> -->
-<?php
-        endwhile;
-    else :
-        // Si aucun article trouvé
-        echo __('Désolé, aucun article trouvé.', 'votretheme');
-    endif;
-?>
+                    </ul>
+                </div>
+
+                <div class="contenair__img">
+                    <?php
+
+                    if (has_post_thumbnail()) {
+                        the_post_thumbnail('large');
+                    }
+                    ?>
+
+                </div>
+
+
+                <!--the_content()
+                <div class="post-content">
+                    <?php //the_content(); 
+                    ?>
+                </div>-->
+
+
+            </article>
+            <!------------------------------------------LE MINI SLIDE DES POSTES -->
+            <div class="contenair__contact">
+                <div class="photo__contact">
+                    <p>Cette photo vous intéresse ? </p>
+
+                    <button class="btn lien-contact-photo" id="lien-contact" data-photo-ref="<?php echo esc_attr(get_field('reference')); ?>">Contact</button>
+
+
+                </div>
+                <div class="thumbnail">
+
+                    <!--les slide des postes -->
+
+
+                    <?php
+                    $prev_post = get_previous_post();
+                    $next_post = get_next_post();
+
+                    if (!empty($prev_post)) : ?>
+                        <div class="navigation">
+                            <div class="navigation_prev">
+                                <div class="prev-photo">
+                                    <a href="<?php echo get_permalink($prev_post->ID); ?>" class="prev-photo" data-thumbnail="<?php echo get_the_post_thumbnail_url($prev_post->ID, 'thumbnail'); ?>">
+                                </div>
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/precedent.svg" alt="Suivant">
+                                </a>
+                            </div>
+                        <?php endif;
+
+                    if (!empty($next_post)) : ?>
+                            <div class="navigation_prev">
+                                <div class="next-photo">
+                                    <a href="<?php echo get_permalink($next_post->ID); ?>" class="next-photo" data-thumbnail="<?php echo get_the_post_thumbnail_url($next_post->ID, 'thumbnail'); ?>">
+                                </div>
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/suivant.svg" alt="Suivant">
+                                </a>
+                            </div>
+
+                        </div>
+                    <?php endif; ?>
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+
+
+
+        <?php endwhile; ?>
+    <?php endif; ?>
+</div>
+
+
+<!--https://www.youtube.com/watch?v=wRXaICf5zEc -->
+
+
+
+
+
+<article>
+
+    <h2>VOUS AIMEREZ AUSSI</h2>
+
+
+
+    <?php get_template_part('template-parts/modal/photo_block'); ?>
+
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php get_footer(); ?>
