@@ -26,7 +26,7 @@ popupCover.addEventListener('click', function (e) {
 });
 
 
-///////////////////////////////////////////////////////////////::///les postes au survol
+///////////////////////////////////////////////////////////////::///les postes au survol //slide de poste 
 
 document.querySelectorAll('.prev-photo, .next-photo').forEach(function (element) {
     element.addEventListener('mouseenter', function () {
@@ -44,4 +44,56 @@ document.querySelectorAll('.prev-photo, .next-photo').forEach(function (element)
             this.removeChild(img);
         }
     });
+});
+
+
+/////////////////////////////////////botton charger plus de poste 
+var page = 1; // Suivre le nombre de pages chargées
+document.getElementById('load-more').addEventListener('click', function () {
+    page++;
+    fetch('/wp-json/wp/v2/photo?per_page=8&page=' + page)
+        .then(response => response.json())
+        .then(photos => {
+            photos.forEach(photo => {
+                // Créez une nouvelle div pour chaque photo
+                var photoDiv = document.createElement('div');
+                photoDiv.className = 'photo';
+
+                // Créez et ajoutez l'image
+                var img = document.createElement('img');
+                img.src = photo.media_details.sizes.full.source_url; // Utilisez l'URL de l'image
+                photoDiv.appendChild(img);
+
+                // Ajoutez d'autres détails si nécessaire, par exemple le titre de la photo
+                var title = document.createElement('h2');
+                title.textContent = photo.title.rendered;
+                photoDiv.appendChild(title);
+
+                // Ajoutez la nouvelle div au conteneur de photos existant
+                document.querySelector('.catalogue-photos').appendChild(photoDiv);
+            });
+        });
+});
+////////////////////////////////////////////////////////////////////////////////////les filtres 
+document.getElementById('filter-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    var category = document.getElementById('category-filter').value;
+    var format = document.getElementById('format-filter').value;
+    var dateOrder = document.getElementById('date-filter').value;
+
+    fetch(`/wp-json/wp/v2/photo?categories=${category}&formats=${format}&order=${dateOrder}`)
+        .then(response => response.json())
+        .then(photos => {
+            var container = document.getElementById('photos-container');
+            container.innerHTML = ''; // Vide le conteneur avant d'ajouter de nouvelles photos
+            photos.forEach(photo => {
+                var photoDiv = document.createElement('div');
+                photoDiv.className = 'photo';
+                var img = document.createElement('img');
+                img.src = photo.media_details.sizes.full.source_url; // Mettez à jour selon la structure de votre réponse
+                photoDiv.appendChild(img);
+                container.appendChild(photoDiv);
+            });
+        });
 });

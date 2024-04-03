@@ -15,3 +15,33 @@ jQuery(document).ready(function ($) {
         $('.popup_cover').css('visibility', 'visible');
     });
 });
+
+////////////////////////////////////////////////////////:les filtres 
+jQuery(document).ready(function ($) {
+    // Quand les filtres changent, exécutez cette fonction
+    $('#category-filter, #format-filter, #date-filter').change(function () {
+        var category = $('#category-filter').val();
+        var format = $('#format-filter').val();
+        var date = $('#date-filter').val();
+
+        $.ajax({
+            method: 'POST',
+            url: my_ajax_object.ajax_url,
+            data: {
+                'action': 'filter_photos', // L'action que WordPress utilisera pour le hook
+                'category': category,
+                'format': format,
+                'date': date
+            },
+            success: function (response) {
+                // Mettez à jour la zone d'affichage des photos avec les nouvelles photos
+                $('.container-catalogue').html(response);
+            },
+            error: function (error) {
+                // Vous pouvez gérer les erreurs ici
+                console.log(error);
+            }
+        });
+    });
+});
+

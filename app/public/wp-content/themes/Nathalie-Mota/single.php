@@ -9,8 +9,37 @@
                     <h1><?php the_title(); ?></h1>
                     <ul class="post-info">
                         <li>RÉFÉRENCE : <?php the_field('reference'); ?></li>
-                        <li>CATÉGORIE : <?php the_field('categorie'); ?></li>
-                        <li>FORMAT : <?php the_field('format'); ?></li>
+                        <!-- Bloc pour afficher les catégories -->
+                        <li>CATÉGORIE :
+                            <?php
+                            $terms = get_the_terms(get_the_ID(), 'category');
+                            if ($terms && !is_wp_error($terms)) {
+                                $categories = array();
+                                foreach ($terms as $term) {
+                                    $categories[] = $term->name;
+                                }
+                                echo implode(', ', $categories); // Affiche les noms des catégories séparés par une virgule
+                            }
+                            ?>
+                        </li>
+
+
+
+                        <!-- -----------------Bloc pour afficher les formats en taxonomy --------------------------------------->
+                        <li>FORMAT :
+                            <?php
+                            $formats = get_the_terms(get_the_ID(), 'format'); // 'format' est le nom réel de ta taxonomie pour le format
+                            if ($formats && !is_wp_error($formats)) {
+                                $format_names = array();
+                                foreach ($formats as $format) {
+                                    $format_names[] = $format->name;
+                                }
+                                echo implode(', ', $format_names); // Affiche les noms des formats séparés par une virgule
+                            }
+                            ?>
+                        </li>
+
+
                         <li>TYPE : <?php the_field('type'); ?></li>
                         <?php
                         $annee_value = get_field('annee');

@@ -22,11 +22,6 @@ add_action('wp_enqueue_scripts', 'nathalie_mota_enqueue_scripts');
 
 
 
-
-
-
-
-
 ////////////////////////////////// Enregistre les emplacements des menus pour permettre leur gestion dans le thème.
 function register_my_menu()
 {
@@ -75,3 +70,44 @@ function add_font_awesome()
     wp_enqueue_style('font-awesome', 'https://use.fontawesome.com/releases/v5.8.1/css/all.css');
 }
 add_action('wp_enqueue_scripts', 'add_font_awesome');
+///////////////////////////////////////////////////////REPONDRE AU REQUETE AJAX 
+
+
+// Cette fonction est appelée en réponse à votre requête AJAX
+function filter_photos_callback()
+{
+    $category = $_POST['category'];
+    $format = $_POST['format'];
+    $date = $_POST['date'];
+
+    // Préparez votre WP_Query avec les arguments de filtrage appropriés
+    $args = array(
+        // Vos arguments de requête ici
+    );
+
+    $query = new WP_Query($args);
+
+    if ($query->have_posts()) {
+
+        while ($query->have_posts()) {
+            $query->the_post();
+            // Ici, générez le HTML pour chaque photo comme vous le feriez dans votre template
+            get_template_part('template-part-for-photo');
+        }
+    } else {
+        echo 'Aucune photo trouvée pour les critères sélectionnés.';
+    }
+
+    wp_reset_postdata();
+
+
+
+
+
+
+    wp_die(); // Cela est nécessaire pour terminer correctement la requête AJAX
+}
+
+// Ajoutez les actions WordPress pour le traitement AJAX
+add_action('wp_ajax_filter_photos', 'filter_photos_callback'); // Pour les utilisateurs connectés
+add_action('wp_ajax_nopriv_filter_photos', 'filter_photos_callback'); // Pour les utilisateurs non connectés

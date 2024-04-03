@@ -155,3 +155,69 @@ body {
     //height: 100%;
     //transform: translate(-50%, -50%);
 }
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////les filtres
+/// 
+//////////////////////////////////////////////les champs de filtres 
+/// 
+
+
+.container_filter {
+    //align-items: center;
+    width: 10%;
+    height: 20vh;
+    background-color: aqua;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .container-category-formats {
+        width: 50%;
+        display: flex;
+    }
+
+    .flexrow {
+        display: flex;
+    }
+
+    .flexcolumn {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/////////////////////////////////////////////////////catalogue
+.container-catalogue {
+    display: flex;
+    align-items: center;
+    //background-color: aqua;
+    justify-content: center;
+    //width: 80%;
+
+
+    .catalogue-photos {
+        // background-color: rebeccapurple;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 80%;
+        gap: 16px;
+
+
+        .photo {
+
+            height: 100%;
+
+            img {
+                width: 617px;
+                height: 604px;
+                object-fit: cover;
+            }
+
+        }
+    }
+}

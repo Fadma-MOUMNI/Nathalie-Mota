@@ -313,4 +313,46 @@ body footer ul {
   height: 604px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.container_filter {
+  width: 80%;
+  height: 20vh;
+  background-color: aqua;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.container_filter .container-category-formats {
+  width: 50%;
+  display: flex;
+}
+.container_filter .flexrow {
+  display: flex;
+}
+.container_filter .flexcolumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-catalogue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-catalogue .catalogue-photos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+  gap: 16px;
+}
+.container-catalogue .catalogue-photos .photo {
+  height: 100%;
+}
+.container-catalogue .catalogue-photos .photo img {
+  width: 617px;
+  height: 604px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */
