@@ -32,12 +32,14 @@ if (!empty($terms)) {
         echo '<div class="related-posts-section">';
         while ($related_posts->have_posts()) {
             $related_posts->the_post();
+
+            //get_template_part('template-parts/photo-content'); // Inclut le fichier de template partiel
+
             echo '<div class="related-photo-container">';
             the_post_thumbnail('medium'); // Assurez-vous d'avoir des tailles d'image appropriées définies
             echo '</div>';
             // the_title();
             //the_field('categorie');
-
         }
         echo '</div>';
     }

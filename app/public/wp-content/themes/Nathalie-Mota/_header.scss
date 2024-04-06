@@ -47,3 +47,25 @@ nav {
 .menu-main-container li {
     text-decoration: none;
 }
+
+
+
+
+
+/////////////////////////////////RESPONSIVE MOBILE//////////////////////////////////////////////
+/// les appareils dont la largeur d'écran est inférieure ou égale à 767 pixels 
+@media screen and (max-width: 767px) {
+
+    header {
+        justify-content: flex-start;
+
+
+
+        .container_header img {
+            width: 138px;
+
+        }
+    }
+
+
+}

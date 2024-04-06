@@ -82,72 +82,87 @@
 
 
                 </div>
-                <div class="thumbnail">
+                <!-- <div class="thumbnail">-->
 
-                    <!--les slide des postes -->
-
+                <!--les slide des postes -->
+                <div class="post-navigation">
 
                     <?php
                     $prev_post = get_previous_post();
-                    $next_post = get_next_post();
+                    $next_post = get_next_post(); ?>
 
-                    if (!empty($prev_post)) : ?>
-                        <div class="navigation">
-                            <div class="navigation_prev">
-                                <div class="prev-photo">
-                                    <a href="<?php echo get_permalink($prev_post->ID); ?>" class="prev-photo" data-thumbnail="<?php echo get_the_post_thumbnail_url($prev_post->ID, 'thumbnail'); ?>">
-                                </div>
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/precedent.svg" alt="Suivant">
+                    <!-- Conteneur pour les images des posts précédent et suivant -->
+                    <div class="post-navigation-images">
+                        <?php if (!empty($prev_post)) : ?>
+                            <div class="prev-photo">
+                                <!-- Lien et image de prévisualisation du post précédent -->
+                                <a href="<?php echo get_permalink($prev_post->ID); ?>" data-thumbnail="<?php echo get_the_post_thumbnail_url($prev_post->ID, 'thumbnail'); ?>">
+                                    <img src="<?php echo get_the_post_thumbnail_url($prev_post->ID, 'thumbnail'); ?>" alt="Image du post précédent">
                                 </a>
                             </div>
-                        <?php endif;
+                        <?php endif; ?>
 
-                    if (!empty($next_post)) : ?>
-                            <div class="navigation_prev">
-                                <div class="next-photo">
-                                    <a href="<?php echo get_permalink($next_post->ID); ?>" class="next-photo" data-thumbnail="<?php echo get_the_post_thumbnail_url($next_post->ID, 'thumbnail'); ?>">
-                                </div>
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/suivant.svg" alt="Suivant">
+                        <?php if (!empty($next_post)) : ?>
+                            <div class="next-photo">
+                                <!-- Lien et image de prévisualisation du post suivant -->
+                                <a href="<?php echo get_permalink($next_post->ID); ?>" data-thumbnail="<?php echo get_the_post_thumbnail_url($next_post->ID, 'thumbnail'); ?>">
+                                    <img src="<?php echo get_the_post_thumbnail_url($next_post->ID, 'thumbnail'); ?>" alt="Image du post suivant">
                                 </a>
                             </div>
+                        <?php endif; ?>
+                    </div>
 
-                        </div>
-                    <?php endif; ?>
+                    <!-- Conteneur pour les flèches de navigation -->
+                    <div class="navigation-arrows">
+                        <?php if (!empty($prev_post)) : ?>
+                            <div class="navigation-arrow-prev">
+                                <!-- Lien pour aller au post précédent -->
+                                <a href="<?php echo get_permalink($prev_post->ID); ?>">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/precedent.svg" alt="Précédent">
+                                </a>
+                            </div>
+                        <?php endif; ?>
 
-
-
-
-
-
-
+                        <?php if (!empty($next_post)) : ?>
+                            <div class="navigation-arrow-next">
+                                <!-- Lien pour aller au post suivant -->
+                                <a href="<?php echo get_permalink($next_post->ID); ?>">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/suivant.svg" alt="Suivant">
+                                </a>
+                            </div>
+                        <?php endif; ?>
+                    </div>
 
                 </div>
+
+                <!-- </div>-->
             </div>
 
 
 
         <?php endwhile; ?>
     <?php endif; ?>
+
+
+
+
+
+
+
+
+
+    <article class="contenair-posts">
+
+        <h2>VOUS AIMEREZ AUSSI</h2>
+        <div>
+
+
+            <?php get_template_part('template-parts/modal/photo_block'); ?>
+        </div>
+    </article>
 </div>
 
-
-<!--https://www.youtube.com/watch?v=wRXaICf5zEc -->
-
-
-
-
-
-<article>
-
-    <h2>VOUS AIMEREZ AUSSI</h2>
-
-
-
-    <?php get_template_part('template-parts/modal/photo_block'); ?>
-
-</article>
-
-
+</div>
 
 
 

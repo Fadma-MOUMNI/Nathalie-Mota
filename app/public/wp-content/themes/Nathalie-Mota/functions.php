@@ -10,10 +10,13 @@ add_action('wp_enqueue_scripts', 'nathalie_mota_style');
 /////////////////////////////////////////////////////// Fonction pour charger les scripts JS
 function nathalie_mota_enqueue_scripts()
 {
-    //ajax
+    // Enregistrer le script AJAX
     wp_enqueue_script('my-ajax-script', get_template_directory_uri() . '/assets/js/my-ajax.js', array('jquery'), null, true);
-    wp_localize_script('my-ajax-script', 'my_ajax_object', array('ajax_url' => admin_url('admin-ajax.php')));
-
+    // Localiser le script avec des données supplémentaires
+    wp_localize_script('my-ajax-script', 'my_ajax_object', array(
+        'ajax_url' => admin_url('admin-ajax.php'), // URL pour les requêtes AJAX
+        'nonce' => wp_create_nonce('my_ajax_nonce') // Créer un nonce pour sécuriser la requête
+    ));
     // Chargement des scripts JS
     wp_enqueue_script('nathalie-mota-script', get_template_directory_uri() . '/assets/js/script.js', array(), false, true);
 }
@@ -72,42 +75,57 @@ function add_font_awesome()
 add_action('wp_enqueue_scripts', 'add_font_awesome');
 ///////////////////////////////////////////////////////REPONDRE AU REQUETE AJAX 
 
-
-// Cette fonction est appelée en réponse à votre requête AJAX
-function filter_photos_callback()
+function filter_photos()
 {
-    $category = $_POST['category'];
-    $format = $_POST['format'];
-    $date = $_POST['date'];
+    // Vérifier le nonce envoyé par AJAX
+    check_ajax_referer('my_ajax_nonce', 'nonce');
 
-    // Préparez votre WP_Query avec les arguments de filtrage appropriés
+    // Récupérer les données envoyées par AJAX
+    $category = isset($_POST['category']) ? $_POST['category'] : '';
+    $format = isset($_POST['format']) ? $_POST['format'] : '';
+    $order = isset($_POST['order']) ? $_POST['order'] : ''; // Récupérer l'ordre de tri
+
+
+
+    // Créer une tax_query basée sur les filtres reçus
+    $tax_query = array('relation' => 'AND');
+    if (!empty($category)) {
+        $tax_query[] = array(
+            'taxonomy' => 'category',
+            'field'    => 'slug',
+            'terms'    => $category,
+        );
+    }
+    if (!empty($format)) {
+        $tax_query[] = array(
+            'taxonomy' => 'format',
+            'field'    => 'slug',
+            'terms'    => $format,
+        );
+    }
+
+
+    // Construire la WP_Query
     $args = array(
-        // Vos arguments de requête ici
-    );
+        'post_type' => 'photo',
+        'tax_query' => $tax_query,
+        'order' => $order, // Ordre de tri (ASC ou DESC)
 
+    );
     $query = new WP_Query($args);
 
+    // Générer le HTML pour la réponse
     if ($query->have_posts()) {
-
         while ($query->have_posts()) {
             $query->the_post();
-            // Ici, générez le HTML pour chaque photo comme vous le feriez dans votre template
-            get_template_part('template-part-for-photo');
+            get_template_part('template-parts/photo-content'); // Le template de photo
         }
     } else {
-        echo 'Aucune photo trouvée pour les critères sélectionnés.';
+        echo 'Aucune photo trouvée.';
     }
 
     wp_reset_postdata();
-
-
-
-
-
-
-    wp_die(); // Cela est nécessaire pour terminer correctement la requête AJAX
+    wp_die(); // Termine correctement la requête AJAX
 }
-
-// Ajoutez les actions WordPress pour le traitement AJAX
-add_action('wp_ajax_filter_photos', 'filter_photos_callback'); // Pour les utilisateurs connectés
-add_action('wp_ajax_nopriv_filter_photos', 'filter_photos_callback'); // Pour les utilisateurs non connectés
+add_action('wp_ajax_filter_photos', 'filter_photos');
+add_action('wp_ajax_nopriv_filter_photos', 'filter_photos');

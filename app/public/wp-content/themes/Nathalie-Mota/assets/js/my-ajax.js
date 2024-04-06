@@ -16,32 +16,39 @@ jQuery(document).ready(function ($) {
     });
 });
 
-////////////////////////////////////////////////////////:les filtres 
+////////////////////////////////////////////////////////:le filtre du catalogue 
 jQuery(document).ready(function ($) {
-    // Quand les filtres changent, exécutez cette fonction
-    $('#category-filter, #format-filter, #date-filter').change(function () {
+    $('#category-filter, #format-filter, #order-filter').change(function () {
+        // Récupérez les valeurs des filtres ici.
         var category = $('#category-filter').val();
         var format = $('#format-filter').val();
-        var date = $('#date-filter').val();
+        var order = $('#order-filter').val(); // Collecter la valeur de tri
 
         $.ajax({
+            url: my_ajax_object.ajax_url, // L'URL pour la requête AJAX, définie via wp_localize_script
             method: 'POST',
-            url: my_ajax_object.ajax_url,
             data: {
-                'action': 'filter_photos', // L'action que WordPress utilisera pour le hook
-                'category': category,
-                'format': format,
-                'date': date
+                action: 'filter_photos', // L'action que WordPress utilisera pour le hook dans fonction.php
+                category: category, // La catégorie sélectionnée
+                format: format, // Le format sélectionné
+                order: order, // Ordre de tri (ASC ou DESC)
+                nonce: my_ajax_object.nonce // Le nonce pour la vérification de sécurité
             },
             success: function (response) {
-                // Mettez à jour la zone d'affichage des photos avec les nouvelles photos
-                $('.container-catalogue').html(response);
+                // Si la requête réussit, mettez à jour le contenu de votre galerie de photos
+                $('.catalogue-photos').html(response); // la classe correspond au conteneur de photos
             },
-            error: function (error) {
-                // Vous pouvez gérer les erreurs ici
-                console.log(error);
+            error: function (errorThrown) {
+                // les erreurs ici
+                console.error('Erreur AJAX : ' + errorThrown);
+                console.log(my_ajax_object)
             }
         });
     });
 });
+
+///////////////////////////////////////////charger plus de postes 
+
+
+
 

@@ -52,6 +52,14 @@ nav {
   text-decoration: none;
 }
 
+@media screen and (max-width: 767px) {
+  header {
+    justify-content: flex-start;
+  }
+  header .container_header img {
+    width: 138px;
+  }
+}
 /***************************************POPUP**************/
 .hidden {
   display: none;
@@ -132,14 +140,60 @@ nav {
   border: 1px solid #47474b;
 }
 
-.contenair__contact {
+.single {
+  width: 70%;
+  margin: auto;
+  padding: 30px 0px 0;
+  font-family: "Space Mono", monospace;
+}
+.single .post {
+  gap: 8px;
   display: flex;
-  padding: 30px 0 10px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.single .post .contenair__img {
+  width: 50%;
+  height: auto;
+}
+.single .post .contenair__img img {
+  width: 100%;
+  height: 100%;
+}
+.single .post .photo__info-description {
+  display: flex;
+  width: 50%;
+  align-items: flex-start;
+  flex-direction: column;
+  align-content: center;
+  justify-content: flex-end;
+  border-bottom: 1px solid #000;
+}
+.single .post .photo__info-description .post-info {
+  list-style-type: none;
+  font-size: 14px;
+  padding-left: 0;
+}
+.single .post .photo__info-description .post-info li {
+  padding: 8px;
+}
+.single .post .photo__info-description h1 {
+  font-style: italic;
+  line-height: 58px;
+  margin: 0;
+  text-transform: uppercase;
+  width: 60%;
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-size: 60px;
+}
+.single .contenair__contact {
+  display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #000;
 }
-.contenair__contact .photo__contact {
+.single .contenair__contact .photo__contact {
   height: 10vh;
   width: 50%;
   display: flex;
@@ -147,13 +201,13 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
-.contenair__contact .photo__contact p {
+.single .contenair__contact .photo__contact p {
   font-family: "Poppins";
   font-size: 14px;
   font-weight: 300;
   line-height: 21px;
 }
-.contenair__contact .photo__contact .btn {
+.single .contenair__contact .photo__contact .btn {
   padding: 15px, 8px, 15px;
   font-family: "space Mono", sans-serif;
   font-size: 12px;
@@ -164,68 +218,134 @@ nav {
   width: 40%;
   height: 5vh;
 }
-
-.main {
-  width: 100%;
-  max-width: 1258px;
-  margin: auto;
-  padding: 30px 0px 0;
-  font-family: "Space Mono", monospace;
-}
-.main article h2 {
-  background-color: aqua;
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
-.post {
-  gap: 8px;
+.single .contenair__contact .post-navigation .post-navigation-images {
+  margin-top: 10px;
+  position: relative;
+  height: 150px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.post .contenair__img {
-  width: 50%;
-}
-.post .contenair__img img {
-  width: 100%;
-  height: 100%;
-}
-.post .photo__info-description {
-  display: flex;
-  width: 50%;
-  align-items: flex-start;
-  flex-direction: column;
-  align-content: center;
-  justify-content: flex-end;
-  border-bottom: 1px solid #000;
-}
-.post .photo__info-description .post-info {
-  list-style-type: none;
-  font-size: 14px;
-  padding-left: 0;
-}
-.post .photo__info-description .post-info li {
-  padding: 8px;
-}
-.post .photo__info-description h1 {
-  font-style: italic;
-  line-height: 58px;
-  margin: 0;
-  text-transform: uppercase;
-  width: 60%;
-  font-family: "Space Mono", monospace;
-  font-weight: 400;
-  /* Poids de la police régulière */
-  font-size: 60px;
-}
-
-.navigation {
-  height: 200px;
-  display: flex;
-  width: 332px;
+  width: 150px;
   justify-content: space-between;
   align-items: flex-end;
+}
+.single .contenair__contact .post-navigation .post-navigation-images .next-photo,
+.single .contenair__contact .post-navigation .post-navigation-images .prev-photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+.single .contenair__contact .post-navigation .post-navigation-images .next-photo {
+  z-index: 0;
+}
+.single .contenair__contact .post-navigation .navigation-arrows {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.single article h2 {
+  font-family: "Space Mono";
+  font-weight: 400;
+  font-size: 18px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+.single .related-posts-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding-bottom: 9vh;
+}
+.single .related-photo-container {
+  width: 50%;
+  height: 60vh;
+}
+.single .related-photo-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (max-width: 767px) {
+  .single {
+    width: 100%;
+  }
+  .single .post {
+    flex-direction: column;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .single .post .contenair__img {
+    width: auto;
+  }
+  .single .post .contenair__img img {
+    width: 265px;
+    height: 397px;
+  }
+  .single .post .photo__info-description {
+    border: none;
+    width: 265px;
+  }
+  .single .post .photo__info-description h1 {
+    line-height: 48px;
+    font-size: 46px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+  }
+  .single .contenair__contact {
+    border-top: 1px solid #000;
+  }
+  .single .contenair__contact .post-navigation {
+    display: none;
+  }
+  .single .contenair__contact .photo__contact {
+    width: 100%;
+    height: 15vh;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .single .contenair__contact .photo__contact .btn {
+    width: 45%;
+    padding-right: 10px;
+  }
+  .single .related-posts-section {
+    flex-direction: column;
+    height: 70vh;
+  }
+  .single .related-posts-section img {
+    width: 317px;
+    height: 278px;
+  }
+  .contenair-posts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+footer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  border-top: 1px solid #000000;
+}
+footer .menu-footer-container {
+  width: 60%;
+}
+footer .menu-footer-container ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+}
+
+@media screen and (max-width: 767px) {
+  footer ul {
+    flex-direction: column;
+    height: 20vh;
+    padding: 0;
+    justify-content: space-evenly;
+    margin-bottom: 2vh;
+  }
 }
 @font-face {
   font-family: "Poppins";
@@ -233,7 +353,16 @@ nav {
 }
 @font-face {
   font-family: "Space Mono";
-  src: url("assets/fonts/SpaceMono-Regular.ttf") format("truetype"), url("assets/fonts/SpaceMono-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  src: url("assets/fonts/SpaceMono-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  /* Bold */
+  src: url("assets/fonts/SpaceMono-Bold.ttf") format("truetype");
 }
 body {
   font-family: "Space Mono", monospace;
@@ -248,19 +377,6 @@ body {
 body a {
   text-decoration: none;
   color: #000000;
-}
-body footer {
-  width: 100%;
-  height: 40px;
-  justify-content: center;
-  border-top: 1px solid #000000;
-}
-body footer ul {
-  width: 10%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  list-style-type: none;
 }
 
 .bannier {
@@ -283,12 +399,11 @@ body footer ul {
   line-height: 142px;
   font-style: italic;
   color: transparent;
-  -webkit-text-stroke: 1px rgb(255, 255, 255);
-  /* Pour enlever les marges par défaut */
+  -webkit-text-stroke: 2px rgb(255, 255, 255);
 }
 .bannier img {
-  width: 2000px;
-  height: 962px;
+  width: 100%;
+  height: 100%;
   top: 80px;
   gap: 0px;
   opacity: 0px;
@@ -297,55 +412,70 @@ body footer ul {
   margin: auto;
 }
 
-.related-posts-section {
-  display: flex;
-  justify-content: space-between;
-  gap: 8px;
-  padding-bottom: 9vh;
-}
-.related-posts-section .related-photo-container {
-  /* ou une largeur fixe si nécessaire */
-  /* donne un ratio de 1:1 pour le carré */
+.option-filter {
+  font-size: 12px;
+  width: 100%;
+  /* ou la largeur désirée */
+  padding: 10px;
+  margin: 0;
+  border: 1px solid #000;
+  /* ou la couleur de bordure désirée */
+  border-radius: 8px;
+  /* ou le rayon de bordure désiré */
+  -webkit-appearance: none;
+  /* Retire le style par défaut pour Safari */
+  -moz-appearance: none;
+  /* Retire le style par défaut pour Firefox */
+  appearance: none;
+  /* Retire le style par défaut pour les autres navigateurs */
+  background-color: white;
+  /* ou la couleur de fond désirée */
+  cursor: pointer;
 }
 
-.related-photo-container img {
-  width: 617px;
-  height: 604px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.container_filter {
-  width: 80%;
-  height: 20vh;
-  background-color: aqua;
+form {
+  width: auto;
   display: flex;
-  justify-content: space-around;
+  align-content: center;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
-.container_filter .container-category-formats {
-  width: 50%;
+form .container_filter {
+  width: 66%;
+  height: 20vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+form .container_filter .flexrow {
   display: flex;
 }
-.container_filter .flexrow {
-  display: flex;
-}
-.container_filter .flexcolumn {
+form .container_filter .flexcolumn {
   display: flex;
   flex-direction: column;
+  width: 18%;
+}
+form .container_filter .container-category-format {
+  width: 49%;
+  justify-content: space-between;
+}
+form .container_filter .filter-category-format {
+  width: 40%;
+  height: 42px;
 }
 
 .container-catalogue {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 66%;
 }
 .container-catalogue .catalogue-photos {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  width: 80%;
-  gap: 16px;
+  justify-content: space-between;
+  width: 100%;
 }
 .container-catalogue .catalogue-photos .photo {
   height: 100%;
@@ -355,4 +485,32 @@ body footer ul {
   height: 604px;
   -o-object-fit: cover;
      object-fit: cover;
+  /*img ::before {
+          // content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: #000000;
+          width: 100%;
+          height: 100%;
+          opacity: 1;
+          transition: all 0.5s ease-in-out;
+      }*/
+}
+
+.container-load-more {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  justify-content: center;
+  display: flex;
+  width: 90%;
+  height: 50px;
+}
+.container-load-more button {
+  font-family: "space mono";
+  font-weight: 400;
+  font-size: 12px;
+  background-color: #D8D8D8;
+  border: none;
+  width: 272px;
 }/*# sourceMappingURL=style.css.map */

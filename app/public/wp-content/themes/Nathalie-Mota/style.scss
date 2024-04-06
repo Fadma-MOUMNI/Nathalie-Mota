@@ -11,6 +11,7 @@ Text Domain : nathalie-mota.*/
 @import 'header';
 @import 'popup';
 @import 'single';
+@import 'footer';
 
 
 ////////////////////////////////les fonts
@@ -18,15 +19,28 @@ Text Domain : nathalie-mota.*/
     font-family: 'Poppins';
     src: url('assets/fonts/Poppins-Regular.ttf') format('truetype'),
         url('assets/fonts/Poppins-Bold.ttf') format('truetype');
+
 }
 
 @font-face {
     font-family: 'Space Mono';
-    src: url('assets/fonts/SpaceMono-Regular.ttf') format('truetype'),
-        url('assets/fonts/SpaceMono-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+    src: url('assets/fonts/SpaceMono-Regular.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    /* Bold */
+    src: url('assets/fonts/SpaceMono-Bold.ttf') format('truetype');
+}
+
+
+
 body {
+    // width: 100%;
     font-family: 'Space Mono', monospace;
     font-size: 16px;
     color: #000000;
@@ -44,24 +58,7 @@ body {
 
 
 
-    ///////////////////////////////////////////////////////footer  
-    footer {
-        // background-color: aqua;
-        width: 100%;
-        height: 40px;
-        justify-content: center;
-        border-top: 1px solid #000000;
 
-        ul {
-            //background-color: black;
-            width: 10%;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            list-style-type: none;
-        }
-
-    }
 
 
 
@@ -86,24 +83,19 @@ body {
         font-weight: 700;
         font-family: 'Space Mono';
         position: absolute;
-        // top: 50%;
-        //left: 50%;
-        //transform: translate3d(-50%, -50%, 0);
-        //width: 100%;
         text-transform: uppercase;
         text-align: center;
         font-size: 96px;
         line-height: 142px;
         font-style: italic;
         color: transparent;
-        -webkit-text-stroke: 1px rgb(255, 255, 255);
-        //margin: 0;
-        /* Pour enlever les marges par défaut */
+        -webkit-text-stroke: 2px rgb(255, 255, 255);
+
     }
 
     img {
-        width: 2000px;
-        height: 962px;
+        width: 100%;
+        height: 100%;
         top: 80px;
         gap: 0px;
         opacity: 0px;
@@ -120,41 +112,6 @@ body {
 
 
 
-////////////////////////////////////////////////photo-block
-/// 
-/// 
-/// 
-.related-posts-section {
-    display: flex;
-    justify-content: space-between;
-    gap: 8px;
-    padding-bottom: 9vh;
-
-    .related-photo-container {
-
-        //width: 100%;
-        //height: 100%;
-        /* ou une largeur fixe si nécessaire */
-        // padding-top: 100%;
-        /* donne un ratio de 1:1 pour le carré */
-        // position: relative;
-        // overflow: hidden;
-    }
-
-}
-
-
-.related-photo-container img {
-    width: 617px;
-    height: 604px;
-    object-fit: cover;
-    //position: absolute;
-    //top: 50%;
-    //left: 50%;
-    //width: auto;
-    //height: 100%;
-    //transform: translate(-50%, -50%);
-}
 
 
 
@@ -164,29 +121,80 @@ body {
 /// 
 //////////////////////////////////////////////les champs de filtres 
 /// 
+.option-filter {
+    font-size: 12px;
+    width: 100%;
+    /* ou la largeur désirée */
+    padding: 10px;
+    margin: 0;
+    border: 1px solid #000;
+    /* ou la couleur de bordure désirée */
+    border-radius: 8px;
+    /* ou le rayon de bordure désiré */
+    -webkit-appearance: none;
+    /* Retire le style par défaut pour Safari */
+    -moz-appearance: none;
+    /* Retire le style par défaut pour Firefox */
+    appearance: none;
+    /* Retire le style par défaut pour les autres navigateurs */
+    background-color: white;
+    /* ou la couleur de fond désirée */
+    cursor: pointer;
+}
 
 
-.container_filter {
-    //align-items: center;
-    width: 10%;
-    height: 20vh;
-    background-color: aqua;
+
+form {
+    width: auto;
+    // background-color: rebeccapurple;
     display: flex;
-    justify-content: space-around;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 
-    .container-category-formats {
-        width: 50%;
-        display: flex;
-    }
 
-    .flexrow {
+    .container_filter {
+        //align-items: center;
+        width: 66%;
+        height: 20vh;
+        // background-color: aqua;
         display: flex;
-    }
+        justify-content: space-between;
+        align-items: center;
 
-    .flexcolumn {
-        display: flex;
-        flex-direction: column;
+
+        .flexrow {
+            display: flex;
+        }
+
+
+        .flexcolumn {
+            display: flex;
+            flex-direction: column;
+            width: 18%;
+
+        }
+
+
+        .container-category-format {
+            width: 49%;
+            //background-color: red;
+            justify-content: space-between;
+
+
+
+
+        }
+
+        .filter-category-format {
+            width: 40%;
+            // border-radius: 2px;
+            height: 42px;
+
+
+        }
+
     }
 }
 
@@ -197,27 +205,84 @@ body {
     //background-color: aqua;
     justify-content: center;
     //width: 80%;
+    // background-color: yellow;
+    width: 66%;
 
 
     .catalogue-photos {
         // background-color: rebeccapurple;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
-        width: 80%;
-        gap: 16px;
+        justify-content: space-between;
+        width: 100%;
+        //gap: 16px;
 
 
         .photo {
-
             height: 100%;
+
+
+
+
+
+
+
+
 
             img {
                 width: 617px;
                 height: 604px;
                 object-fit: cover;
+
+
+
+                /*img ::before {
+                        // content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background-color: #000000;
+                        width: 100%;
+                        height: 100%;
+                        opacity: 1;
+                        transition: all 0.5s ease-in-out;
+                    }*/
+
+
+
             }
 
         }
     }
+
+
 }
+
+
+//////////////////////////////////////////////////////////////////////bouton charger plus 
+.container-load-more {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    justify-content: center;
+    display: flex;
+    width: 90%;
+    height: 50px;
+    // background-color: aqua;
+    //padding: 8px, 15px, 8px, 15px;
+
+    button {
+        font-family: 'space mono';
+        font-weight: 400;
+        font-size: 12px;
+        background-color: #D8D8D8;
+        border: none;
+        //border-radius: 1px;
+        width: 272px;
+
+    }
+}
+
+
+
+
+/////////////////////////////////////////////////////////////////////-->(Au survol LES IMAGES  )
