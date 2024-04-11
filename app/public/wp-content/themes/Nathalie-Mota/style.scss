@@ -37,7 +37,9 @@ Text Domain : nathalie-mota.*/
     src: url('assets/fonts/SpaceMono-Bold.ttf') format('truetype');
 }
 
-
+#primary {
+    width: 100%;
+}
 
 body {
     // width: 100%;
@@ -70,7 +72,8 @@ body {
 
 
 .bannier {
-    width: 100%;
+    min-width: 1440px;
+    //width: 100%;
     height: 100vh;
     /* La bannière prendra 100% de la hauteur de l'écran */
     display: flex;
@@ -145,7 +148,8 @@ body {
 
 
 form {
-    width: auto;
+    // min-width: 1440px;
+    //width: auto;
     // background-color: rebeccapurple;
     display: flex;
     align-content: center;
@@ -156,7 +160,7 @@ form {
 
     .container_filter {
         //align-items: center;
-        width: 66%;
+        width: 60%;
         height: 20vh;
         // background-color: aqua;
         display: flex;
@@ -206,7 +210,7 @@ form {
     justify-content: center;
     //width: 80%;
     // background-color: yellow;
-    width: 66%;
+    width: 60%;
 
 
     .catalogue-photos {
@@ -215,44 +219,110 @@ form {
         flex-wrap: wrap;
         justify-content: space-between;
         width: 100%;
-        //gap: 16px;
+        //gap: 10px;
+
 
 
         .photo {
-            height: 100%;
 
+            height: 50vh;
+            width: 50%;
 
+            position: relative;
 
+            /* &::before {
 
-
-
-
-
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                //background-color: #13131378;
+                width: 99%;
+                height: 99%;
+                opacity: 1;
+                transition: all 0.5s ease-in-out;
+            }*/
 
             img {
-                width: 617px;
-                height: 604px;
+                width: 99%;
+                height: 99%;
                 object-fit: cover;
 
-
-
-                /*img ::before {
-                        // content: "";
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        background-color: #000000;
-                        width: 100%;
-                        height: 100%;
-                        opacity: 1;
-                        transition: all 0.5s ease-in-out;
-                    }*/
+                //  position: absolute;
 
 
 
             }
 
+
+            .overlay {
+
+                visibility: hidden;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 99%;
+                height: 99%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                // background-color: rgba(33, 32, 32, 0.717);
+                transition: all 0.5s ease-in-out;
+
+                .container-fullscreen-icon {
+                    margin: 10px;
+                    display: flex;
+                    justify-content: flex-end;
+
+
+                    img {
+                        width: 34px;
+                        height: 34px;
+
+                    }
+                }
+
+
+
+
+                .container-eye-icon {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        width: 46px;
+                        height: 31.2px;
+                    }
+                }
+
+                .container-catego-reference {
+                    margin: 0px 10px 0px 10px;
+                    display: flex;
+                    justify-content: space-between;
+
+                    p {
+                        color: #ffffff;
+                    }
+
+                }
+            }
+
+
+
         }
+
+        :hover .overlay {
+            visibility: visible;
+            transition: all 1s ease-out;
+            background-color: rgba(15, 15, 15, 0.602);
+        }
+
+
+
+
+
+
     }
 
 

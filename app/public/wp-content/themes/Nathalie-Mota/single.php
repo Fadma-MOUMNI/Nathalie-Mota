@@ -1,6 +1,7 @@
 <!--Ce fichier est utilisé pour afficher le contenu d'un article individuel d'un blog.-->
 <?php get_header(); ?>
 
+
 <div class="main single">
     <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
@@ -8,17 +9,15 @@
                 <div class="photo__info-description">
                     <h1><?php the_title(); ?></h1>
                     <ul class="post-info">
+
                         <li>RÉFÉRENCE : <?php the_field('reference'); ?></li>
                         <!-- Bloc pour afficher les catégories -->
                         <li>CATÉGORIE :
                             <?php
-                            $terms = get_the_terms(get_the_ID(), 'category');
-                            if ($terms && !is_wp_error($terms)) {
-                                $categories = array();
-                                foreach ($terms as $term) {
-                                    $categories[] = $term->name;
-                                }
-                                echo implode(', ', $categories); // Affiche les noms des catégories séparés par une virgule
+                            $id = get_the_ID(); // Récupère l'ID du post courant
+                            $categories = get_the_terms($id, 'categorie'); // 'categorie' est le nom de ta taxonomie
+                            if (!is_wp_error($categories)) {
+                                echo implode(', ', wp_list_pluck($categories, 'name')); // Extrait les noms et les implémente
                             }
                             ?>
                         </li>
@@ -28,13 +27,10 @@
                         <!-- -----------------Bloc pour afficher les formats en taxonomy --------------------------------------->
                         <li>FORMAT :
                             <?php
-                            $formats = get_the_terms(get_the_ID(), 'format'); // 'format' est le nom réel de ta taxonomie pour le format
-                            if ($formats && !is_wp_error($formats)) {
-                                $format_names = array();
-                                foreach ($formats as $format) {
-                                    $format_names[] = $format->name;
-                                }
-                                echo implode(', ', $format_names); // Affiche les noms des formats séparés par une virgule
+                            // $id = get_the_ID(); // Récupère l'ID du post courant
+                            $formats = get_the_terms($id, 'format'); // 'format' est le nom de ta taxonomie
+                            if (!is_wp_error($formats)) {
+                                echo implode(', ', wp_list_pluck($formats, 'name')); // wp_list_pluck Extrait les noms et les implémente
                             }
                             ?>
                         </li>
@@ -51,6 +47,7 @@
                         <li>ANNÉE : <?php echo $annee; ?></li>
 
 
+
                     </ul>
                 </div>
 
@@ -65,11 +62,6 @@
                 </div>
 
 
-                <!--the_content()
-                <div class="post-content">
-                    <?php //the_content(); 
-                    ?>
-                </div>-->
 
 
             </article>
@@ -150,41 +142,61 @@
 
 
 
+    <?php
+    // Récupérez les termes de la catégorie pour le post actuel
+    $terms = wp_get_post_terms(get_the_ID(), 'categorie'); // 'category' est l'identifiant de la taxonomie
 
-    <article class="contenair-posts">
+    if (!empty($terms)) {
+        $term_ids = array_map(function ($term) {
+            return $term->term_id;
+        }, $terms);
 
-        <h2>VOUS AIMEREZ AUSSI</h2>
-        <div>
-
-
-            <?php get_template_part('template-parts/modal/photo_block'); ?>
-        </div>
-    </article>
-</div>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
+        $args = array(
+            'post_type' => 'photo', // 'photo' est l'identifiant de votre CPT
+            'post_status' => 'publish',
+            'posts_per_page' => 2, // Le nombre de photos à afficher
+            'orderby' => 'rand', // Affichez les posts de manière aléatoire
+            'post__not_in' => array(get_the_ID()), // Exclut le post actuel
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'categorie', // Utilisez l'identifiant de votre taxonomie
+                    'field'    => 'term_id',
+                    'terms'    => $term_ids,
+                ),
+            ),
+        );
 
 
 
 
 
+        $related_posts = new WP_Query($args);
+        if ($related_posts->have_posts()) {
+            echo '<article>';
+            echo ' <h2> Vous aimerez AUSSI </h2>';
+            // echo '<div class="container-photos-meme-categorie">';
+
+            echo '<div class="container-photos-meme-categorie">';
+            while ($related_posts->have_posts()) {
+                $related_posts->the_post();
+
+                //get_template_part('template-parts/photo-content'); // Inclut le fichier de template partiel
+
+                //echo '<div class="related-photo-container">';
+                get_template_part('template-parts/photo-block'); // Inclut le fichier de template partiel
+                //the_post_thumbnail('medium'); // Assurez-vous d'avoir des tailles d'image appropriées définies
+                // echo '</div>';
+                // the_title();
+                //the_field('categorie');
+                // echo '</div>';
+
+            }
+            echo '</div>';
+            echo '</article>';
+        }
+
+        wp_reset_postdata(); // Réinitialiser les informations de la requête d'origine
+    }
 
 
 
@@ -195,4 +207,32 @@
 
 
 
-<?php get_footer(); ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    get_footer();

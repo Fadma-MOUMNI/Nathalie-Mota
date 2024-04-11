@@ -194,6 +194,93 @@
             padding-top: 40px;
             padding-bottom: 20px;
         }
+
+        .container-photos-meme-categorie {
+            display: flex;
+            justify-content: space-between;
+            //gap: 8px;
+            margin-bottom: 10vh;
+
+            .photo {
+                position: relative;
+                //width: 564px;
+                // height: 495px;
+                height: 60vh;
+                width: 50%;
+
+
+                img {
+                    width: 99%;
+                    height: 99%;
+                    object-fit: cover;
+                }
+
+                //************
+
+                .overlay {
+
+                    visibility: hidden;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 99%;
+                    height: 99%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    // background-color: rgba(33, 32, 32, 0.717);
+                    transition: all 0.5s ease-in-out;
+
+                    .container-fullscreen-icon {
+                        margin: 10px;
+                        display: flex;
+                        justify-content: flex-end;
+
+
+                        img {
+                            width: 34px;
+                            height: 34px;
+
+                        }
+                    }
+
+
+
+
+                    .container-eye-icon {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        img {
+                            width: 46px;
+                            height: 31.2px;
+                        }
+                    }
+
+                    .container-catego-reference {
+                        margin: 0px 10px 0px 10px;
+                        display: flex;
+                        justify-content: space-between;
+
+                        p {
+                            color: #ffffff;
+                        }
+
+                    }
+                }
+
+
+
+            }
+
+            :hover .overlay {
+                visibility: visible;
+                transition: all 1s ease-out;
+                background-color: rgba(15, 15, 15, 0.602);
+            }
+
+        }
     }
 
 
@@ -309,28 +396,33 @@
 
 
 
-
-
-        .related-posts-section {
-            flex-direction: column;
-            height: 70vh;
-
-            img {
-
-                width: 317px;
-                height: 278px;
+        article {
+            h2 {
+                text-align: center;
             }
 
+            .container-photos-meme-categorie {
+                flex-direction: column;
+                height: 70vh;
+                align-items: center;
+
+                img {
+
+                    width: 317px;
+                    height: 278px;
+                }
+
+            }
         }
 
 
     }
 
-    .contenair-posts {
+    /* .contenair-posts {
         display: flex;
         flex-direction: column;
         align-items: center;
 
 
-    }
+    }*/
 }

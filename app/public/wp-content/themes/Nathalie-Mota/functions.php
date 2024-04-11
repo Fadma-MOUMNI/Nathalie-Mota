@@ -84,6 +84,8 @@ function filter_photos()
     $category = isset($_POST['category']) ? $_POST['category'] : '';
     $format = isset($_POST['format']) ? $_POST['format'] : '';
     $order = isset($_POST['order']) ? $_POST['order'] : ''; // Récupérer l'ordre de tri
+    // Ajouter une récupération pour 'page'
+    $paged = isset($_POST['page']) ? $_POST['page'] : 1;
 
 
 
@@ -110,6 +112,9 @@ function filter_photos()
         'post_type' => 'photo',
         'tax_query' => $tax_query,
         'order' => $order, // Ordre de tri (ASC ou DESC)
+        'posts_per_page' => 8,
+        'paged' => $paged,
+
 
     );
     $query = new WP_Query($args);
@@ -118,7 +123,8 @@ function filter_photos()
     if ($query->have_posts()) {
         while ($query->have_posts()) {
             $query->the_post();
-            get_template_part('template-parts/photo-content'); // Le template de photo
+            get_template_part('template-parts/photo-block'); // Le template de photo
+
         }
     } else {
         echo 'Aucune photo trouvée.';

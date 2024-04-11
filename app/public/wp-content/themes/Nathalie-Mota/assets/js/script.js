@@ -3,8 +3,8 @@
 //////////////////////////////////////////////////////////////////////////////////////LA POPUP
 
 
-var contactButton = document.getElementById('lien-contact');
-var popupCover = document.querySelector('.popup_cover');
+const contactButton = document.getElementById('lien-contact');
+const popupCover = document.querySelector('.popup_cover');
 
 //*********************Ouvrir la popup lorsque le bouton de contact est cliqué
 contactButton.addEventListener('click', function () {
@@ -63,19 +63,7 @@ if (navArrowPrev && prevPhoto) {
 
 
 
-//////////////////////////////////////////////////////////////////////////////LES IMAGES AU SURVOL EXEMPLE NE FONCTION PAS 
 
-document.addEventListener("DOMContentLoaded", function () {
-    var postDiv = document.getElementById("postDiv");
 
-    postDiv.addEventListener("mouseover", function () {
-        this.classList.add("highlighted");
-        this.innerHTML += "<h3>" + this.dataset.title + "</h3>";
-        this.innerHTML += "<p>" + this.dataset.category + "</p>";
-    });
 
-    postDiv.addEventListener("mouseout", function () {
-        this.classList.remove("highlighted");
-        this.innerHTML = ""; // Supprime le contenu ajouté
-    });
-});
+

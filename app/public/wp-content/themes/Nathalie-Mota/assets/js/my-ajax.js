@@ -47,7 +47,48 @@ jQuery(document).ready(function ($) {
     });
 });
 
+
+
+
+
 ///////////////////////////////////////////charger plus de postes 
+jQuery(document).ready(function ($) {
+    var ajaxurl = my_ajax_object.ajax_url; // Assurez-vous que cette variable est correctement localisée dans votre fichier PHP.
+    var page = 1; // La page initiale est la page 1.
+
+    $('#load-more').click(function (e) {
+        e.preventDefault();
+        page++; // Incrémentez le numéro de la page à charger.
+
+        var data = {
+            'action': 'filter_photos', // L'action doit correspondre à celle que vous avez enregistrée dans WP AJAX hooks.
+            'nonce': my_ajax_object.nonce, // Le nonce pour la sécurité.
+            'page': page, // Transmettez le numéro de la page que vous chargez.
+
+        };
+
+        // Effectuez la requête AJAX.
+        $.ajax({
+            url: ajaxurl,
+            data: data,
+            type: 'POST',
+            beforeSend: function (xhr) {
+                // Vous pouvez ajouter une animation de chargement ici.
+                $('#load-more').text('Chargement...');
+            },
+            success: function (response) {
+                if (response.trim() === 'Aucune photo trouvée.') {
+                    $('#load-more').hide(); // Cachez le bouton si la réponse est 'Aucune photo trouvée.'
+                } else {
+                    $('.container-catalogue .catalogue-photos').append(response);
+
+                    $('#load-more').text('Charger plus'); // Réinitialiser le texte du bouton
+                }
+            }
+        });
+    });
+});
+
 
 
 

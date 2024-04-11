@@ -1,7 +1,7 @@
 
 <?php
 // Récupérez les termes de la catégorie pour le post actuel
-$terms = wp_get_post_terms(get_the_ID(), 'category'); // 'category' est l'identifiant de la taxonomie
+$terms = wp_get_post_terms(get_the_ID(), 'categorie'); // 'category' est l'identifiant de la taxonomie
 
 if (!empty($terms)) {
     $term_ids = array_map(function ($term) {
@@ -16,7 +16,7 @@ if (!empty($terms)) {
         'post__not_in' => array(get_the_ID()), // Exclut le post actuel
         'tax_query' => array(
             array(
-                'taxonomy' => 'category', // Utilisez l'identifiant de votre taxonomie
+                'taxonomy' => 'categorie', // Utilisez l'identifiant de votre taxonomie
                 'field'    => 'term_id',
                 'terms'    => $term_ids,
             ),
@@ -33,7 +33,6 @@ if (!empty($terms)) {
         while ($related_posts->have_posts()) {
             $related_posts->the_post();
 
-            //get_template_part('template-parts/photo-content'); // Inclut le fichier de template partiel
 
             echo '<div class="related-photo-container">';
             the_post_thumbnail('medium'); // Assurez-vous d'avoir des tailles d'image appropriées définies

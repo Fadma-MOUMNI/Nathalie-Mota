@@ -8,6 +8,7 @@ Tags: photography, portfolio, responsive
 Text Domain : nathalie-mota.*/
 /********************************** HEADER***************/
 header {
+  z-index: 111;
   width: 100%;
   background-color: rgb(255, 255, 255);
   font-size: 16px;
@@ -249,6 +250,65 @@ nav {
   padding-top: 40px;
   padding-bottom: 20px;
 }
+.single article .container-photos-meme-categorie {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10vh;
+}
+.single article .container-photos-meme-categorie .photo {
+  position: relative;
+  height: 60vh;
+  width: 50%;
+}
+.single article .container-photos-meme-categorie .photo img {
+  width: 99%;
+  height: 99%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.single article .container-photos-meme-categorie .photo .overlay {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 99%;
+  height: 99%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.5s ease-in-out;
+}
+.single article .container-photos-meme-categorie .photo .overlay .container-fullscreen-icon {
+  margin: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+.single article .container-photos-meme-categorie .photo .overlay .container-fullscreen-icon img {
+  width: 34px;
+  height: 34px;
+}
+.single article .container-photos-meme-categorie .photo .overlay .container-eye-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.single article .container-photos-meme-categorie .photo .overlay .container-eye-icon img {
+  width: 46px;
+  height: 31.2px;
+}
+.single article .container-photos-meme-categorie .photo .overlay .container-catego-reference {
+  margin: 0px 10px 0px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.single article .container-photos-meme-categorie .photo .overlay .container-catego-reference p {
+  color: #ffffff;
+}
+.single article .container-photos-meme-categorie :hover .overlay {
+  visibility: visible;
+  transition: all 1s ease-out;
+  background-color: rgba(15, 15, 15, 0.602);
+}
 .single .related-posts-section {
   display: flex;
   justify-content: space-between;
@@ -308,19 +368,25 @@ nav {
     width: 45%;
     padding-right: 10px;
   }
-  .single .related-posts-section {
+  .single article h2 {
+    text-align: center;
+  }
+  .single article .container-photos-meme-categorie {
     flex-direction: column;
     height: 70vh;
+    align-items: center;
   }
-  .single .related-posts-section img {
+  .single article .container-photos-meme-categorie img {
     width: 317px;
     height: 278px;
   }
-  .contenair-posts {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+  /* .contenair-posts {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+
+  }*/
 }
 footer {
   display: flex;
@@ -364,6 +430,10 @@ footer .menu-footer-container ul {
   /* Bold */
   src: url("assets/fonts/SpaceMono-Bold.ttf") format("truetype");
 }
+#primary {
+  width: 100%;
+}
+
 body {
   font-family: "Space Mono", monospace;
   font-size: 16px;
@@ -380,7 +450,7 @@ body a {
 }
 
 .bannier {
-  width: 100%;
+  min-width: 1440px;
   height: 100vh;
   /* La bannière prendra 100% de la hauteur de l'écran */
   display: flex;
@@ -434,7 +504,6 @@ body a {
 }
 
 form {
-  width: auto;
   display: flex;
   align-content: center;
   flex-direction: column;
@@ -442,7 +511,7 @@ form {
   align-items: center;
 }
 form .container_filter {
-  width: 66%;
+  width: 60%;
   height: 20vh;
   display: flex;
   justify-content: space-between;
@@ -469,7 +538,7 @@ form .container_filter .filter-category-format {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 66%;
+  width: 60%;
 }
 .container-catalogue .catalogue-photos {
   display: flex;
@@ -478,24 +547,70 @@ form .container_filter .filter-category-format {
   width: 100%;
 }
 .container-catalogue .catalogue-photos .photo {
-  height: 100%;
+  height: 50vh;
+  width: 50%;
+  position: relative;
+  /* &::before {
+
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      //background-color: #13131378;
+      width: 99%;
+      height: 99%;
+      opacity: 1;
+      transition: all 0.5s ease-in-out;
+  }*/
 }
 .container-catalogue .catalogue-photos .photo img {
-  width: 617px;
-  height: 604px;
+  width: 99%;
+  height: 99%;
   -o-object-fit: cover;
      object-fit: cover;
-  /*img ::before {
-          // content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          background-color: #000000;
-          width: 100%;
-          height: 100%;
-          opacity: 1;
-          transition: all 0.5s ease-in-out;
-      }*/
+}
+.container-catalogue .catalogue-photos .photo .overlay {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 99%;
+  height: 99%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.5s ease-in-out;
+}
+.container-catalogue .catalogue-photos .photo .overlay .container-fullscreen-icon {
+  margin: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+.container-catalogue .catalogue-photos .photo .overlay .container-fullscreen-icon img {
+  width: 34px;
+  height: 34px;
+}
+.container-catalogue .catalogue-photos .photo .overlay .container-eye-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-catalogue .catalogue-photos .photo .overlay .container-eye-icon img {
+  width: 46px;
+  height: 31.2px;
+}
+.container-catalogue .catalogue-photos .photo .overlay .container-catego-reference {
+  margin: 0px 10px 0px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.container-catalogue .catalogue-photos .photo .overlay .container-catego-reference p {
+  color: #ffffff;
+}
+.container-catalogue .catalogue-photos :hover .overlay {
+  visibility: visible;
+  transition: all 1s ease-out;
+  background-color: rgba(15, 15, 15, 0.602);
 }
 
 .container-load-more {

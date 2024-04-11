@@ -32,17 +32,17 @@ get_header(); // Inclure le header
             <div class="container_filter">
                 <!-----------------------le champ de filtre catégorie -->
                 <?php
-                $categories = get_terms('category', array('hide_empty' => false));
+                $categories = get_terms('categorie', array('hide_empty' => false));
                 ?>
                 <div class="container-category-format flexrow">
                     <div class="filter-category-format flexcolumn">
 
-                        <select class="option-filter" name="category" id="category-filter">
+                        <select class="option-filter" name="categorie" id="category-filter">
                             <option value="" selected>CATÉGORIES</option>
-                            <option value=""></option>
-                            <?php foreach ($categories as $category) : ?>
-                                <option value="<?php echo esc_attr($category->slug); ?>">
-                                    <?php echo esc_html($category->name); ?>
+
+                            <?php foreach ($categories as $categorie) : ?>
+                                <option value="<?php echo esc_attr($categorie->slug); ?>">
+                                    <?php echo esc_html($categorie->name); ?>
                                 </option>
                             <?php endforeach; ?>
                         </select>
@@ -76,12 +76,41 @@ get_header(); // Inclure le header
 
                 <div class="filter-order flexcolumn ">
 
+
+
+
+
+
+
                     <select class="option-filter" name="order" id="order-filter">
                         <option value="" selected>TRIER PAR</option>
                         <option value=""></option>
                         <option value="DESC">Plus récentes</option>
                         <option value="ASC">Plus anciennes</option>
                     </select>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 </div>
 
             </div>
@@ -97,11 +126,10 @@ get_header(); // Inclure le header
 
 
             // Récupérer la valeur de la catégorie à partir des paramètres URL, ou la définir à vide si elle n'est pas définie.
-            $category_filter = isset($_GET['category']) ? $_GET['category'] : '';
+            $category_filter = isset($_GET['categorie']) ? $_GET['categorie'] : '';
             // Récupérer la valeur du format à partir des paramètres URL, ou la définir à vide si elle n'est pas définie.
             $format_filter = isset($_GET['format']) ? $_GET['format'] : '';
-            // Récupérer la valeur du filtre de date à partir des paramètres URL
-            // $date_filter = isset($_GET['date']) ? $_GET['date'] : '';
+
 
             // Préparation des arguments de base pour la requête WP_Query.
             $args = array(
@@ -121,7 +149,7 @@ get_header(); // Inclure le header
             // Ajouter un filtre par catégorie à la tax_query si une catégorie est définie.
             if (!empty($category_filter)) {
                 $tax_query[] = array(
-                    'taxonomy' => 'category', // Utilise la taxonomie 'category'.
+                    'taxonomy' => 'categorie', // Utilise la taxonomie 'category'.
                     'field'    => 'slug', // Utilise le 'slug' pour le matching des termes.
                     'terms'    => $category_filter, // Les termes à filtrer.
                 );
@@ -135,15 +163,6 @@ get_header(); // Inclure le header
                     'terms'    => $format_filter, // Les termes à filtrer.
                 );
             }
-
-            /*Ajouter un filtre par date à la tax_query si une date est définie.
-            if (!empty($date_filter)) {
-                $tax_query[] = array(
-                    'taxonomy' => 'date_taxonomy', // Remplacez 'date_taxonomy' par le slug réel de votre taxonomie de date.
-                    'field'    => 'slug', // Ou 'term_id' si vous filtrez par l'ID du terme.
-                    'terms'    => $date_filter,
-                );
-            }*/
 
             // Ajouter la relation 'AND' à la tax_query si nécessaire.
             if (count($tax_query) > 1) {
@@ -171,7 +190,7 @@ get_header(); // Inclure le header
                 echo '<div class="catalogue-photos">';
                 while ($photo_query->have_posts()) {
                     $photo_query->the_post(); // Itère sur les posts.
-                    get_template_part('template-parts/photo-content'); // Inclut le fichier de template partiel
+                    get_template_part('template-parts/photo-block'); // Inclut le fichier de template partiel
                 }
                 echo '</div>';
                 echo '</div>';
