@@ -10,10 +10,15 @@
 
 <?php
 get_template_part('template-parts/modal/contact');
+get_template_part('template-parts/modal/lightbox');
 ?>
 
 
-<?php wp_footer(); ?>
+<?php wp_footer();
+
+?>
+
+
 
 </body>
 

@@ -1,0 +1,261 @@
+/********************************** HEADER***************/
+.hamburger {
+    display: none;
+}
+
+header {
+    z-index: 22222222222222222222222222222222;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    font-size: 16px;
+    top: 0;
+    box-shadow: 0px 11px 12px -7px rgba(126, 126, 126, 0.226);
+    //position: sticky;
+
+    position: sticky;
+    display: flex;
+
+    /* align-items: center;*/
+    justify-content: center;
+}
+
+.container_header {
+
+    //position: sticky;
+
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+.container_header img {
+    width: 220px;
+
+    margin: 40px;
+}
+
+.menu-main-container,
+.menu {
+    width: 100%;
+}
+
+nav {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.menu-main-container #menu-main {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+.menu-main-container li {
+    text-decoration: none;
+}
+
+////////////////////////////////////////////////////////////////////////////hamburger
+/* Base styles for the hamburger lines */
+
+.hamburger {
+    background-color: white;
+    border: none;
+}
+
+.hamburger .line {
+    display: block;
+    height: 2px;
+    width: 25px;
+    background: #000;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* Transform hamburger into X when .open is added to .hamburger */
+.hamburger.open .line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open .line:first-child {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open .line:last-child {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+
+
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+        //
+
+        //display: none;
+        display: flex;
+        //opacity: 1;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+        //opacity: 0;
+        //display: none;
+        //visibility: hidden;
+    }
+}
+
+//l'animation de fermeture ajouter via js 
+@keyframes slideOut {
+    from {
+        // display: block;
+        margin-left: 0%;
+        width: 100%;
+        //opacity: 1;
+
+
+    }
+
+    to {
+        margin-left: 100%;
+        width: 300%;
+        display: none !important;
+        // visibility: hidden;
+        opacity: 0;
+        // visibility: hidden;
+    }
+}
+
+
+
+/////////////////////////////////RESPONSIVE MOBILE//////////////////////////////////////////////
+/// les appareils dont la largeur d'écran est inférieure ou égale à 767 pixels 
+@media screen and (max-width: 767px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-menu {
+        //visibility: hidden;
+        // animation: slidein 2s;
+        animation: slideOut 2s;
+        // opacity: 0;
+        //animation-play-state: paused;
+        //transform: translateX(100%);
+        //display: none;
+    }
+
+
+    // .animOut {
+    //     animation: slideOut 2s;
+    //    }
+
+    .nav-menu.open {
+        // animation: slideOut 2s;
+        animation: slidein 2s;
+        //transform: translateX(0);
+        // display: flex;
+        //animation: slidein 2s;
+        // opacity: 1;
+
+
+    }
+
+
+
+
+    .nav-menu.close {
+        // animation: slideOut 2s;
+        //animation: slidein 2s;
+        //transform: translateX(0);
+        display: none;
+        //animation: slidein 2s;
+        // opacity: 1;
+
+
+    }
+
+
+    #menu-main {
+        justify-content: center !important;
+
+    }
+
+
+
+
+    header {
+        .container_header {
+            flex-direction: column;
+            width: 100%;
+            height: 12vh;
+
+            img {
+                width: 138px;
+            }
+
+
+            .container_logo_menu_hamburger {
+                display: flex;
+                justify-content: space-between;
+                height: 11vh;
+                //width: 95%;
+            }
+
+            nav {
+                width: 100% !important;
+
+                ul {
+
+                    display: flex;
+
+                    flex-direction: column;
+                    background: red;
+                    align-items: center;
+                    height: 100vh;
+                    width: 100%;
+                    margin: 0;
+
+
+
+                    a {
+                        color: rgb(255, 255, 255);
+                        font-size: 44px;
+
+                    }
+                }
+            }
+
+
+        }
+    }
+
+
+
+
+
+
+}
+
+/////////////
+///////////////////////////////////////////////////////////////////Tablette 
+
+@media (min-width: 768px) and (max-width: 1025px) {
+
+
+    header {
+        .container_header {
+            // background-color: red($color: #000000);
+            width: 100%;
+        }
+    }
+
+
+}

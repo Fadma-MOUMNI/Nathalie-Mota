@@ -1,0 +1,157 @@
+///////////////////////////////////scss lightbox 
+
+
+
+
+
+$white: white;
+$font-lightbox: 'SpaceMono', sans-serif;
+$font-info: 'Poppins';
+
+#lightboxModal {
+    display: none;
+    position: fixed;
+    z-index: 888888888888888888888888;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: auto;
+
+    #contenair-img-info {
+        top: 140px;
+        height: 100%;
+        position: relative;
+        // width: 80%;
+        margin: auto;
+
+        .contenair-img {
+            height: 67%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+
+            #lightbox-img {
+                max-width: 50%;
+                max-height: 77vh;
+                object-fit: contain;
+            }
+        }
+
+        #lightbox-info {
+            display: flex;
+            justify-content: space-between;
+            width: 50%;
+            margin: auto;
+            color: $white;
+            font-family: $font-info;
+            font-weight: 500;
+            font-size: 14px;
+            text-transform: uppercase;
+            line-height: 21px;
+            text-align: center;
+        }
+    }
+
+    #lightbox-close {
+        z-index: 9999999999999999999;
+        position: absolute;
+        top: 68px;
+        right: 100px;
+        font-size: 42px;
+        cursor: pointer;
+        color: $white;
+
+    }
+
+    .navigation-arrow-prev-lightbox,
+    .navigation-arrow-next-lightbox {
+        font-family: $font-lightbox;
+        font-weight: 400;
+        letter-spacing: .2rem;
+        line-height: 18px;
+        cursor: pointer;
+        color: $white;
+        font-size: 20px;
+        position: absolute;
+        top: 35%;
+
+
+        &.navigation-arrow-next-lightbox {
+            right: 6%;
+            top: 35%;
+        }
+
+        &.navigation-arrow-prev-lightbox {
+            left: 6%;
+            top: 35%;
+        }
+    }
+}
+
+///////////////////////////////Animation de la croix de fermuture de la lightbox 
+@keyframes closLightbox {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+///////////ajouter via js 
+.animation-cosLightbox {
+    animation: closLightbox 1s linear;
+}
+
+////////////////////////////////////////////////////
+
+
+@media screen and (max-width: 767px) {
+
+
+
+
+    #lightboxModal {
+
+
+        #contenair-img-info {
+
+            .contenair-img {
+                height: 38%;
+
+
+                #lightbox-img {
+                    max-width: 80%;
+                }
+            }
+
+            #lightbox-info {
+                max-width: 80%;
+            }
+        }
+
+        #lightbox-close {
+            top: 82px;
+        }
+
+        .navigation-arrow-prev-lightbox,
+        .navigation-arrow-next-lightbox {
+
+            font-size: 14px;
+
+
+            &.navigation-arrow-next-lightbox {
+                right: -1%;
+
+            }
+        }
+    }
+
+
+
+
+
+}

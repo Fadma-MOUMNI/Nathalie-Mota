@@ -1,0 +1,346 @@
+/*Theme Name : Nathalie-Mota  ;
+Theme URI : pas de uri (projet en local) ;
+Author : le développeur ou l’agence ayant développé le thème ;
+Description : Un thème WordPress moderne et réactif conçu pour la photographie et les portfolios ;
+Version : 1 ;
+Tags: photography, portfolio, responsive
+Text Domain : nathalie-mota.*/
+
+
+
+@import 'header';
+@import 'popup';
+@import 'single';
+@import 'champs_filter';
+@import 'lightbox';
+@import 'footer';
+
+
+////////////////////////////////les fonts
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Regular.ttf') format('truetype'),
+        url('../fonts/Poppins-Bold.ttf') format('truetype');
+
+}
+
+@font-face {
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/SpaceMono-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    /* Bold */
+    src: url('../fonts/SpaceMono-Bold.ttf') format('truetype');
+}
+
+#primary {
+    width: 100%;
+}
+
+body {
+    // width: 100%;
+    font-family: 'Space Mono', monospace;
+    font-size: 16px;
+    color: #000000;
+    // height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        text-decoration: none;
+        color: #000000;
+    }
+
+
+
+
+
+
+
+}
+
+
+
+///////////////////////////////////////////////////////Bannier
+
+
+.bannier {
+
+    //min-width: 1440px;
+    //width: 100%;
+    height: 100vh;
+    /* La bannière prendra 100% de la hauteur de l'écran */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    h1 {
+        // background-color: aqua;
+        font-weight: 700;
+        font-family: 'Space Mono';
+        position: absolute;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 96px;
+        line-height: 142px;
+        font-style: italic;
+        color: transparent;
+        -webkit-text-stroke: 2px rgb(255, 255, 255);
+
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        top: 80px;
+        gap: 0px;
+        opacity: 0px;
+
+        //max-height: 800px;
+        //height: auto;
+        object-fit: cover;
+        margin: auto;
+
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////catalogue
+.container-catalogue {
+    display: flex;
+    align-items: center;
+    //background-color: aqua;
+    justify-content: center;
+    //width: 80%;
+    // background-color: yellow;
+    width: 60%;
+
+
+    .catalogue-photos {
+        // background-color: rebeccapurple;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        //gap: 10px;
+
+
+
+        .photo {
+
+            height: 50vh;
+            width: 50%;
+
+            position: relative;
+
+            img {
+                width: 99%;
+                height: 99%;
+                object-fit: cover;
+
+                //  position: absolute;
+
+
+
+            }
+
+
+            .overlay {
+
+                visibility: hidden;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 99%;
+                height: 99%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                // background-color: rgba(33, 32, 32, 0.717);
+                transition: all 0.5s ease-in-out;
+
+                .container-fullscreen-icon {
+                    margin: 10px;
+                    display: flex;
+                    justify-content: flex-end;
+
+
+                    img {
+                        width: 34px;
+                        height: 34px;
+
+                    }
+                }
+
+
+
+
+                .container-eye-icon {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        width: 46px;
+                        height: 31.2px;
+                    }
+                }
+
+                .container-catego-reference {
+                    margin: 0px 10px 0px 10px;
+                    display: flex;
+                    justify-content: space-between;
+
+                    p {
+                        color: #ffffff;
+                    }
+
+                }
+            }
+
+
+
+        }
+
+        ////////////////////
+        :hover .overlay {
+            visibility: visible;
+            transition: all 1s ease-out;
+            background-color: rgba(15, 15, 15, 0.602);
+        }
+
+
+
+
+
+
+    }
+
+
+}
+
+
+//////////////////////////////////////////////////////////////////////bouton charger plus 
+.container-load-more {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    justify-content: center;
+    display: flex;
+    width: 90%;
+    height: 50px;
+    // background-color: aqua;
+    //padding: 8px, 15px, 8px, 15px;
+
+    button {
+        font-family: 'space mono';
+        font-weight: 400;
+        font-size: 12px;
+        background-color: #D8D8D8;
+        border: none;
+        //border-radius: 1px;
+        width: 272px;
+
+    }
+}
+
+
+
+
+
+/////////////////////////////////RESPONSIVE TABLETTE///////////////////////
+
+
+
+
+
+/////////////////////////////////RESPONSIVE MOBILE///////////////////////
+/// les appareils dont la largeur d'écran est inférieure ou égale à 767 pixels
+@media screen and (max-width: 767px) {
+
+    .bannier {
+        height: 70vh;
+
+
+        h1 {
+            font-size: 27px;
+        }
+
+    }
+
+
+
+
+
+    .catalogue-photos {
+
+
+        .photo {
+
+            height: 30vh !important;
+            width: 100% !important;
+
+
+
+        }
+    }
+
+    .container-load-more {
+
+        button {
+            width: 200px;
+        }
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

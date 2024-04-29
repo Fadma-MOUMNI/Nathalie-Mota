@@ -1,0 +1,230 @@
+/////////////////////////////////////////////////////////////////////////////////les filtres
+/// 
+//////////////////////////////////////////////les champs de filtres 
+///
+//
+
+
+form {
+
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    .container_filter {
+        //align-items: center;
+        width: 60%;
+        height: 20vh;
+        // background-color: aqua;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        .flexrow {
+            display: flex;
+        }
+
+
+        .flexcolumn {
+            display: flex;
+            flex-direction: column;
+            width: 18%;
+
+        }
+
+
+        .container-category-format {
+            width: 49%;
+            //background-color: red;
+            justify-content: space-between;
+
+
+
+
+        }
+
+        .filter-category-format {
+            // background-color: aqua;
+            width: 40%;
+            // border-radius: 2px;
+            height: 42px;
+
+
+
+
+        }
+
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////css select2
+/* Ajouter du CSS pour personnaliser Select2 */
+.select2-selection__rendered {
+    font-family: 'Poppins';
+    font-size: 12px;
+    color: #000;
+}
+
+.select2-selection__arrow {
+    padding-top: 22px;
+    // z-index: 1111;
+}
+
+.selection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+
+    input {
+        border: none !important;
+    }
+
+}
+
+.select2-search--dropdown {
+    border: none !important;
+    width: 100%;
+    // background-color: #c60909;
+}
+
+
+
+.select2 {
+    width: 100%;
+}
+
+.select2-container--default .select2-selection--single {
+    //display: flex !important;
+    //align-items: center !important;
+    border: 1px solid #ffffff;
+    border-radius: 8px !important;
+    height: 43px !important;
+    width: 100%;
+}
+
+.select2-results__option {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    font-family: 'Poppins';
+    font-size: 12px;
+}
+
+/* Ajouter du CSS pour personnaliser Select2 dropdown */
+.select2-container--default .select2-results__option:first-child {
+    background-color: #ffffff !important;
+    color: #000 !important;
+}
+
+.select2-container--default .select2-results__option {
+    background-color: #ffffff !important;
+    color: #000 !important;
+}
+
+.select2-container--default .select2-results__option:hover {
+    background-color: #FFD6D6 !important;
+    color: #000 !important;
+}
+
+.select2-container--default .select2-results__option:not(:first-child)[aria-selected=true] {
+    background-color: #E00000 !important;
+    color: #fff !important;
+}
+
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    padding-top: 10px;
+    // color: #c60909;
+    line-height: 58px;
+}
+
+.select2-search--dropdown .select2-search__field {
+    width: 95% !important;
+
+}
+
+///chevron de champ 
+
+
+/* Masquer la flèche par défaut */
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    display: none;
+}
+
+/* Style pour le chevron par défaut (vers le bas) */
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    background: url('../img/iconchevron1.svg') no-repeat center center;
+    transform: rotate(180deg);
+    width: 30px !important;
+    height: 6px;
+}
+
+/* Style pour le chevron lors de l'ouverture du Select2 (vers le haut) */
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow {
+    padding-top: 25px;
+    width: 37px !important;
+    transform: rotate(0deg);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////RESPONSIVE MOBILE et tablette ///////////////////////
+/// les appareils dont la largeur d'écran est inférieure ou égale à 767 pixels
+@media screen and (max-width: 1000px) {
+    form {
+        .container_filter {
+            flex-direction: column;
+            justify-content: center;
+            // width: 70%;
+            height: 30vh;
+
+            .container-category-format {
+                flex-direction: column;
+                width: 100%;
+                height: 12vh;
+
+                .filter-category-format {
+                    width: 100%;
+                }
+            }
+
+            .filter-order {
+                margin-top: 7px;
+                width: 100%;
+
+
+
+            }
+
+
+        }
+
+
+    }
+
+    .select2 {
+        width: 100% !important;
+    }
+
+}
