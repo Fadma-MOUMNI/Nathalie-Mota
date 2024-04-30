@@ -57,7 +57,7 @@ add_filter('wp_nav_menu_items', 'ajouter_lien_contact_menu', 10, 2);
 
 
 
-/////////////////////////////////////////// Répond aux requêtes AJAX pour filtrer les photos selon différentes critères.
+///////////////////////////////////////////////////La fonction qui récupère les photos correspondant aux filtres sélectionnés////////////
 
 function filter_photos()
 {
@@ -115,16 +115,20 @@ function filter_photos()
 
     // Vérifie si la requête WP_Query a trouvé des posts correspondant aux critères de filtrage.
     if ($query->have_posts()) {
-        // Commence la capture du HTML généré par les templates.
-        ob_start();
+
+        ob_start();/* // Commence à enregistrer tout le HTML généré après cette ligne.*/
+
+
         // Boucle sur chaque post trouvé par la requête.
         while ($query->have_posts()) {
             $query->the_post();  // Prépare les données du post pour l'affichage.
 
             get_template_part('template-parts/photo-block');
         }
-        // Termine la capture du HTML et le stocke dans la variable $html.
-        $html = ob_get_clean();
+
+        $html = ob_get_clean();/* // Arrête l'enregistrement et retourne tout le HTML capturé en une seule chaîne de caractères,
+         permettant de l'envoyer en une seule réponse au client via AJAX.*/
+
         // Détermine s'il y a plus de pages de résultats à afficher.
         $more_photos = ($query->max_num_pages > $query->query_vars['paged']);
 
@@ -137,3 +141,4 @@ function filter_photos()
 }
 add_action('wp_ajax_filter_photos', 'filter_photos');
 add_action('wp_ajax_nopriv_filter_photos', 'filter_photos');
+/////////////

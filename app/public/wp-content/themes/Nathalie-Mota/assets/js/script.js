@@ -21,7 +21,7 @@ popupCover.addEventListener('click', function (e) {
 });
 
 
-//////////////////////////////////////////////////////////////// POPUP avec la reference //////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////// LA POPUP avec la reference//////////////////////////////////////////////////////
 
 // S'assurer que le code ne s'exécute qu'après que le DOM de la page soit entièrement chargé
 jQuery(document).ready(function ($) {
@@ -96,34 +96,10 @@ hamburger.addEventListener('click', function () {
 
     // Ajoutez ou retirez la classe 'open' du menu à chaque clic.
     navMenu.classList.toggle('open');
-    // navMenu.classList.toggle('close');
-
-    // logoContainer.classList.toggle('open'); // Appliquer la classe 'open' au conteneur également
-
-
-
-    /*fermer la nav
-    if (!navMenu.classList.contains('open')) {
-        // Si la classe 'open' a été retirée, masquez le menu de navigation
-        navMenu.style.display = 'none';
-    }*/
-
-
-    /*
-        // Vérifiez si la classe 'open' a été ajoutée
-        if (navMenu.classList.contains('open')) {
-            // Si la classe 'open' a été ajoutée, affichez le menu de navigation
-            navMenu.style.display = 'block';
-        } else {
-            // Si la classe 'open' a été retirée, masquez le menu de navigation
-            navMenu.style.display = 'none';
-        }*/
 
 
 
 });
-
-
 
 
 // Ajoutez un écouteur d'événements pour détecter la fin de l'animation
@@ -209,6 +185,5 @@ function prevlightbox() {
         fullscreenIcon.click();
     }
 }
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 

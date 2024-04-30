@@ -1,7 +1,7 @@
 
 //////////////////////////////////////////////////////////le filtre du catalogue ////////////////////////////////////////////////////
 jQuery(document).ready(function ($) {
-    // Cette ligne assure que le code à l'intérieur ne s'exécute que lorsque le DOM est complètement chargé et que jQuery est prêt à être utilisé. Le '$' est passé comme argument pour pouvoir utiliser '$' au lieu de 'jQuery' dans le bloc de code, évitant les conflits avec d'autres bibliothèques.
+
 
     let page = 1; // Déclare une variable 'page' et initialise à 1. Cette variable garde la trace de la page courante pour la pagination.
 
@@ -14,7 +14,7 @@ jQuery(document).ready(function ($) {
             // 'url' est l'URL vers laquelle la requête est envoyée. Ici, elle utilise une variable définie dans le fichier PHP pour obtenir l'URL d'administration AJAX de WordPress.
             method: 'POST',
             // 'method' spécifie la méthode HTTP utilisée pour la requête, ici 'POST'.
-            dataType: 'json', // Attendez une réponse en format JSON.
+            dataType: 'json', // la réponse en format JSON.
             data: {
                 // 'data' contient les données envoyées au serveur.
                 action: 'filter_photos', // Action WordPress pour laquelle AJAX doit répondre.(que j'ai creer dans le fichier function.php)
@@ -24,10 +24,7 @@ jQuery(document).ready(function ($) {
                 page: nextPage, // Numéro de page envoyé pour la pagination.
                 nonce: my_ajax_object.nonce // Un nonce pour sécuriser la requête.
             },
-            // beforeSend: function () {
-            // Fonction exécutée avant que la requête ne soit envoyée, utilisée ici pour modifier le texte du bouton et le désactiver.
-            // $('#load-more').text('Chargement...').prop('disabled', true);
-            //},
+
             success: function (response) {
                 if (response.success) {
                     if (nextPage === 1) {

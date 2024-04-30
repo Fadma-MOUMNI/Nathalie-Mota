@@ -84,7 +84,7 @@ $formats = get_the_terms($id, 'format');
                 <div class="photo__contact">
                     <p>Cette photo vous intéresse ? </p>
                     <!----------------------------------------- Bouton avec reference -->
-                    <!--  (data-photo-ref)stocke la référence de la photo pour utilisation dans le formulaire de contact(la suite dans le fichier my-ajax.js)  -->
+                    <!--  (data-photo-ref)stocke la référence de la photo pour utilisation dans le formulaire de contact(la suite dans le fichier (js)  -->
                     <button class="btn lien-contact-photo" id="lien-contact" data-photo-ref="<?php echo esc_attr($reference); ?>">Contact</button>
 
                 </div>
@@ -192,7 +192,7 @@ $formats = get_the_terms($id, 'format');
             while ($related_posts->have_posts()) {
                 $related_posts->the_post();
 
-                get_template_part('template-parts/photo-block'); // Inclut le fichier de template partiel
+                get_template_part('template-parts/photo-block'); // Inclut le fichier de template 
 
             }
             echo '</div>';

@@ -120,11 +120,11 @@ $font-info: 'Poppins';
         #contenair-img-info {
 
             .contenair-img {
-                height: 38%;
+                height: 57%;
 
 
                 #lightbox-img {
-                    max-width: 80%;
+                    //max-width: 80%;
                 }
             }
 
@@ -139,12 +139,18 @@ $font-info: 'Poppins';
 
         .navigation-arrow-prev-lightbox,
         .navigation-arrow-next-lightbox {
+            //top: 2%;
 
             font-size: 14px;
 
 
             &.navigation-arrow-next-lightbox {
                 right: -1%;
+
+            }
+
+            &.navigation-arrow-prev-lightbox {
+                left: 1%;
 
             }
         }
