@@ -64,7 +64,9 @@ function filter_photos()
     // Vérification de la sécurité : Nonce envoyé par AJAX
     check_ajax_referer('my_ajax_nonce', 'nonce');
 
-    // Récupérer et sécuriser les informations sur la catégorie choisie depuis le formulaire.
+    /////// Récupérer et sécuriser les informations sur la catégorie choisie depuis le formulaire.
+    // Utilise sanitize_text_field pour nettoyer la chaîne de texte entrée. 
+    // Cette fonction supprime les balises HTML et les espaces excessifs pour prévenir les attaques XSS et assurer la sécurité des données.
     $category = isset($_POST['categorie']) ? sanitize_text_field($_POST['categorie']) : '';
     $format = isset($_POST['format']) ? sanitize_text_field($_POST['format']) : '';
     $order = isset($_POST['order']) ? sanitize_text_field($_POST['order']) : 'ASC'; // Définir une valeur par défaut pour l'ordre

@@ -9,7 +9,7 @@ jQuery(document).ready(function ($) {
         // Définition de la fonction 'loadPhotos' qui prend quatre paramètres pour charger les photos en fonction des filtres et de la page spécifiée.
 
         $.ajax({
-            // Démarre une requête AJAX en utilisant jQuery. AJAX est utilisé pour interagir avec le serveur sans recharger la page.
+            // URL pour la requête AJAX vers le serveur WordPress.
             url: my_ajax_object.ajax_url,
             // 'url' est l'URL vers laquelle la requête est envoyée. Ici, elle utilise une variable définie dans le fichier PHP pour obtenir l'URL d'administration AJAX de WordPress.
             method: 'POST',
@@ -28,10 +28,12 @@ jQuery(document).ready(function ($) {
             success: function (response) {
                 if (response.success) {
                     if (nextPage === 1) {
-                        $('.catalogue-photos').html(response.data.html);
+                        // Met à jour le contenu de la page avec les nouvelles photos.
+                        $('.catalogue-photos').html(response.data.html);// Si première page, remplace le contenu.
                     } else {
-                        $('.catalogue-photos').append(response.data.html);
+                        $('.catalogue-photos').append(response.data.html);// Ajoute à la suite si autres pages.
                     }
+                    // Affiche ou cache le bouton "Charger plus" basé sur s'il y a plus de photos.
                     if (response.data.more_photos) {
                         $('#load-more').show().text('Charger plus').prop('disabled', false);
                     } else {

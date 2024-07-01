@@ -12,10 +12,10 @@
 // Obtenir les posts précédent et suivant
 $prev_post = get_previous_post();
 $next_post = get_next_post();
-//$image_id = get_post_meta($id, 'photos', true);
+
 // Obtenir le lien permanent du post
 $post_link = get_permalink();
-//$categorie = get_field('categorie');
+
 $id = get_the_ID(); // Récupère l'ID du post courant
 // Récupérer les termes de la taxonomie 'categorie' pour le post courant
 $categories = get_the_terms($id, 'categorie'); // (get_the_terms) pour les les taxonomies,

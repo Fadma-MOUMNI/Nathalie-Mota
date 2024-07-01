@@ -171,7 +171,7 @@ $formats = get_the_terms($id, 'format');
             'post_type' => 'photo', // 'photo' est l'identifiant de  CPT
             'post_status' => 'publish',
             'posts_per_page' => 2, // Le nombre de photos à afficher
-            'orderby' => 'rand', // Affichez les posts de manière aléatoire
+            // 'orderby' => 'rand', // Affichez les posts de manière aléatoire
             'post__not_in' => array(get_the_ID()), // Exclut le post actuel
             'tax_query' => array(
                 array(
