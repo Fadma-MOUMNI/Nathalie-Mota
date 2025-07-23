@@ -1,4 +1,4 @@
-Projet 11 Openclassroom :
+Projet 11 Openclassrooms :
 
 => un site WordPress complexe pour une photographe freelance (du parcours "Développeur WordPress" avec OpenClassrooms)
 
