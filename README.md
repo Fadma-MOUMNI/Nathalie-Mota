@@ -1,3 +1,5 @@
+Projet 11 Openclassroom :
+
 => un site WordPress complexe pour une photographe freelance (du parcours "Développeur WordPress" avec OpenClassrooms)
 
 Mission de ce projet:
@@ -7,7 +9,7 @@ Mission de ce projet:
 
 
 
-Déroulement du projet:
+=> Déroulement du projet:
 
 01 - Installation de WordPress 6.1.1.
 
