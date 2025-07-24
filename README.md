@@ -61,10 +61,11 @@ https://www.figma.com/proto/gJ6dbs1BgsawrHUuYX0ZOO/Nathalie-Mota---Maquette-2.0?
 
 ## 🎥 Démo vidéo
 
-   => visionner directement ici :  
+   ▶️ [Visionner la démonstration ici](https://github.com/user-attachments/assets/ef2da331-e2b6-4e83-8e37-3b86fa6a791c)
 
 
-https://github.com/user-attachments/assets/ef2da331-e2b6-4e83-8e37-3b86fa6a791c
+
+
 
 Note :
 
