@@ -9,6 +9,26 @@ Créer un site WordPress sur mesure pour une photographe freelance afin de lui p
 - Présenter ses séries photos
 - Offrir une navigation fluide et interactive à ses visiteurs
 
+
+
+
+## 🎨 Maquette utilisée
+Le site a été conçu à partir de cette maquette Figma fournie dans le cadre du projet :
+
+🔗 Voir la maquette Nathalie Mota sur Figma:
+
+https://www.figma.com/proto/gJ6dbs1BgsawrHUuYX0ZOO/Nathalie-Mota---Maquette-2.0?page-id=0%3A1&node-id=2906-10253&starting-point-node-id=2%3A130&scaling=min-zoom&content-scaling=fixed&show-proto-sidebar=1&t=3chYoqBaTVyaaYnu-1 
+
+🖌️ La maquette a été respectée avec précision pour assurer un rendu fidèle et professionnel.
+
+
+
+
+
+
+
+
+
 ## 🛠️ Stack technique
 
 - WordPress 6.1.1
