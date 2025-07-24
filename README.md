@@ -33,11 +33,15 @@ Créer un site WordPress sur mesure pour une photographe freelance afin de lui p
 - 📁 Gestion ACF pour les contenus et export JSON
 - 🖱️ Effets survol, lightbox, icônes interactives
 
-## 📽️ Démo vidéo
 
-[🎬 Voir la démo du site](https://nathaliemota.great-site.net/)
 
-🎥 Ou visionner directement ici :  
+## 🚀 Lien vers le site
+
+🔗 [https://nathaliemota.great-site.net/](https://nathaliemota.great-site.net/)
+
+## 🎥 Démo vidéo
+
+   => visionner directement ici :  
 
 
 https://github.com/user-attachments/assets/ef2da331-e2b6-4e83-8e37-3b86fa6a791c
@@ -46,9 +50,7 @@ Note :
 
 La qualité de cette vidéo a été volontairement réduite afin de limiter sa taille pour l’hébergement sur GitHub. Elle sert uniquement à illustrer le fonctionnement de mon travail, et non à en démontrer la qualité visuelle.
 
-## 🚀 Lien vers le site
 
-🔗 [https://nathaliemota.great-site.net/](https://nathaliemota.great-site.net/)
 
 ## 📌 Statut
 
