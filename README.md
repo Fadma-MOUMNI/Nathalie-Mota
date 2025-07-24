@@ -38,8 +38,7 @@ Créer un site WordPress sur mesure pour une photographe freelance afin de lui p
 
 [🎬 Voir la démo du site](https://nathaliemota.great-site.net/)
 
-Ou visionner directement ici :  
-🎥 `nathaliemota-muted-compressed.mp4`
+🎥 Ou visionner directement ici :  
 
 
 https://github.com/user-attachments/assets/ef2da331-e2b6-4e83-8e37-3b86fa6a791c
