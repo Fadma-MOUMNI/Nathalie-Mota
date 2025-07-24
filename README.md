@@ -1,5 +1,4 @@
-
-         # 📸 Nathalie Mota — Site WordPress personnalisé
+## 📸 Nathalie Mota — Site WordPress personnalisé
 
 Projet réalisé dans le cadre de la formation **Développeur WordPress** chez [OpenClassrooms](https://openclassrooms.com).
 
