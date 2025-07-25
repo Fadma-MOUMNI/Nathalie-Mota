@@ -73,11 +73,6 @@ La qualité de cette vidéo a été volontairement réduite afin de limiter sa t
 
 
 
-## 📌 Statut
-
-✅ Projet finalisé et mis en ligne  
-📁 Refonte potentielle possible pour améliorer encore l’expérience mobile
- 
           
           
           
