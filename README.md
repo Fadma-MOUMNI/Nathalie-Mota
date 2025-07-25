@@ -32,7 +32,7 @@ https://www.figma.com/proto/gJ6dbs1BgsawrHUuYX0ZOO/Nathalie-Mota---Maquette-2.0?
 ## 🛠️ Stack technique
 
 - WordPress 6.1.1
-- Thème personnalisé (créé from scratch)
+- Thème personnalisé 
 - HTML, CSS, JS, jQuery, PHP
 - ACF & ACF JSON
 - CPT & taxonomies
