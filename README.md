@@ -43,13 +43,13 @@ https://www.figma.com/proto/gJ6dbs1BgsawrHUuYX0ZOO/Nathalie-Mota---Maquette-2.0?
 
 ## 🧱 Fonctionnalités principales
 
-- 🎨 Intégration complète à partir d’une maquette Adobe XD
+- 🎨 Intégration complète à partir d’une maquette Figma
 - 🖼️ Hero dynamique sur la page d’accueil
 - 🧭 Système de menus dynamiques (gérés depuis WordPress)
 - 📑 Pages statiques : A propos, Mentions légales, Vie privée
 - 📸 Page d’accueil avec galerie dynamique et filtres
 - 🔍 Filtres AJAX + scrolling horizontal + flèches de navigation (précédente/suivante)
-- 💌 Formulaire de contact avec injection dynamique et sécurité anti-SQL
+- 💌 Formulaire de contact avec injection dynamique 
 - 📁 Gestion ACF pour les contenus et export JSON
 - 🖱️ Effets survol, lightbox, icônes interactives
 
